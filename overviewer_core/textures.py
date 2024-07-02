@@ -6544,3 +6544,13 @@ def enchantment_table(self, blockid, data):
 
     img = self.build_full_block((top, 8), None, None, side1, side2)
     return img
+
+# Sculk Shrieker
+@material(blockid=1133, transparent=True, nodata=True)
+def enchantment_table(self, blockid, data):  
+    top=self.load_image_texture("assets/minecraft/textures/block/sculk_shrieker_inner_top.png")
+    side=self.load_image_texture("assets/minecraft/textures/block/sculk_shrieker_side.png")    
+
+    img = self.build_full_block((top, 8), None, None, side, side)
+    return img
+

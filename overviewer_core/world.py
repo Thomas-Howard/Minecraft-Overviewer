@@ -880,6 +880,7 @@ class RegionSet(object):
             'minecraft:tinted_glass': (1140, 0),
             'minecraft:sculk': (1130, 0),
             'minecraft:sculk_catalyst': (1132, 0),
+            'minecraft:sculk_shrieker': (1133, 0),
             'minecraft:sculk_sensor': (1134, 0),
             'minecraft:calibrated_sculk_sensor': (1135, 0),
 
