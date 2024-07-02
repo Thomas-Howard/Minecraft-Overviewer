@@ -6554,3 +6554,24 @@ def enchantment_table(self, blockid, data):
     img = self.build_full_block((top, 8), None, None, side, side)
     return img
 
+
+@material(blockid=1131, data=list(range(1 << 6)), transparent=True)
+def sculk_vein(self, blockid, data):
+    tex = self.load_image_texture("assets/minecraft/textures/block/sculk_vein.png")
+
+    bottom = tex if data & 1 << 0 else None
+    top = tex if data & 1 << 1 else None
+    east = tex if data & 1 << 2 else None
+    south = tex if data & 1 << 3 else None
+    west = tex if data & 1 << 4 else None
+    north = tex if data & 1 << 5 else None
+
+    if self.rotation == 0:
+        return self.build_full_block(top, north, east, west, south, bottom)
+    elif self.rotation == 1:
+        return self.build_full_block(top, west, north, south, east, bottom)
+    elif self.rotation == 2:
+        return self.build_full_block(top, south, west, east, north, bottom)
+    else: # self.rotation == 3:
+        return self.build_full_block(top, east, south, north, west, bottom)
+    

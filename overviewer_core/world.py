@@ -879,6 +879,7 @@ class RegionSet(object):
             'minecraft:muddy_mangrove_roots': (1127, 0),
             'minecraft:tinted_glass': (1140, 0),
             'minecraft:sculk': (1130, 0),
+            'minecraft:sculk_vein': (1131, 0),
             'minecraft:sculk_catalyst': (1132, 0),
             'minecraft:sculk_shrieker': (1133, 0),
             'minecraft:sculk_sensor': (1134, 0),
@@ -1447,7 +1448,7 @@ class RegionSet(object):
             p = palette_entry['Properties']
             if p['berries'] == 'true':
                 data = 1
-        elif key == 'minecraft:glow_lichen':
+        elif key in ['minecraft:glow_lichen', 'minecraft:sculk_vein']:
             p = palette_entry['Properties']
             if p['down'] == 'true':
                 data |= 1 << 0
