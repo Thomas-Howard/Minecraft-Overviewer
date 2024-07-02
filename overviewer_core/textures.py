@@ -6476,3 +6476,18 @@ def froglight(self, blockid, data):
 
     return self.build_axis_block(top, side, data)
 
+
+# Sculk Sensors
+@material(blockid=[1134,1135], transparent=True, nodata=True)
+def enchantment_table(self, blockid, data):
+    if blockid == 1135:        
+        top=self.load_image_texture("assets/minecraft/textures/block/calibrated_sculk_sensor_top.png")
+        side1=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
+        side2=self.load_image_texture("assets/minecraft/textures/block/calibrated_sculk_sensor_input_side.png")
+    else:
+        top=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_top.png")
+        side1=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
+        side2=side1
+
+    img = self.build_full_block((top, 8), None, None, side1, side2)
+    return img

@@ -879,6 +879,8 @@ class RegionSet(object):
             'minecraft:muddy_mangrove_roots': (1127, 0),
             'minecraft:sculk': (1130, 0),
             'minecraft:sculk_catalyst': (1132, 0),
+            'minecraft:sculk_sensor': (1134, 0),
+            'minecraft:calibrated_sculk_sensor': (1135, 0),
 
             # 1.20 blocks
             'minecraft:cherry_log': (1128, 0),
