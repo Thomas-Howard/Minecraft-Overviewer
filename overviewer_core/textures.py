@@ -1656,7 +1656,7 @@ def tall_grass(self, blockid, data):
     if data == 0: # dead shrub
         texture = self.load_image_texture("assets/minecraft/textures/block/dead_bush.png")
     elif data == 1: # tall grass
-        texture = self.load_image_texture("assets/minecraft/textures/block/grass.png")
+        texture = self.load_image_texture("assets/minecraft/textures/block/short_grass.png")
     elif data == 2: # fern
         texture = self.load_image_texture("assets/minecraft/textures/block/fern.png")
     
@@ -6404,3 +6404,8 @@ def cherryleaves(self, blockid, data):
     data = data & 0x7
     t = self.load_image_texture("assets/minecraft/textures/block/cherry_leaves.png")
     return self.build_block(t, t)
+
+
+block(blockid=1130, top_image="assets/minecraft/textures/block/sculk.png")
+block(blockid=1132, top_image="assets/minecraft/textures/block/sculk_catalyst_top.png",
+      side_image="assets/minecraft/textures/block/sculk_catalyst_side.png")

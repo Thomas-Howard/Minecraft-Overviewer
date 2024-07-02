@@ -873,7 +873,8 @@ class RegionSet(object):
             'minecraft:mangrove_log': (1126, 0),
             'minecraft:stripped_mangrove_log': (1126, 1),
             'minecraft:muddy_mangrove_roots': (1127, 0),
-            'minecraft:sculk': (11508, 1),
+            'minecraft:sculk': (1130, 0),
+            'minecraft:sculk_catalyst': (1132, 0),
 
             # 1.20 blocks
             'minecraft:cherry_log': (1128, 0),
