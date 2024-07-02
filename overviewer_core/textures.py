@@ -125,7 +125,7 @@ class Textures(object):
         except TextureException as e:
             logging.error(
                 "Your system is missing either assets/minecraft/textures/colormap/foliage.png "
-                "or assets/minecraft/textures/colormap/grass.png. Either complement your "
+                "or assets/minecraft/textures/colormap/short-grass.png. Either complement your "
                 "resource pack with these texture files, or install the vanilla Minecraft "
                 "client to use as a fallback.")
             raise e
