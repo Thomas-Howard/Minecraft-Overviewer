@@ -323,6 +323,10 @@ class RegionSet(object):
             'minecraft:dark_oak_planks': (5, 5),
             'minecraft:crimson_planks': (5, 6),
             'minecraft:warped_planks': (5, 7),
+            'minecraft:cherry_planks': (5, 8),
+            'minecraft:bamboo_planks': (5, 9),
+            'minecraft:bamboo_mosaic': (5, 10),
+            'minecraft:mangrove_planks': (5, 11),
             'minecraft:sapling': (6, 0),
             'minecraft:bedrock': (7, 0),
             'minecraft:water': (8, 0),
@@ -881,6 +885,8 @@ class RegionSet(object):
             'minecraft:stripped_cherry_log': (1128, 1),
             'minecraft:cherry_leaves': (1129,0),
             'minecraft:pink_petals': (11509, 0),
+            'minecraft:bamboo_block': (1136, 0),
+            'minecraft:stripped_bamboo_block' : (1136, 1),
 
             # New blocks
             'minecraft:carved_pumpkin': (11300, 0),

@@ -978,7 +978,7 @@ def dirt_blocks(self, blockid, data):
 block(blockid=4, top_image="assets/minecraft/textures/block/cobblestone.png")
 
 # wooden planks
-@material(blockid=5, data=list(range(8)), solid=True)
+@material(blockid=5, data=list(range(16)), solid=True)
 def wooden_planks(self, blockid, data):
     if data == 0: # normal
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/oak_planks.png"), self.load_image_texture("assets/minecraft/textures/block/oak_planks.png"))
@@ -996,6 +996,14 @@ def wooden_planks(self, blockid, data):
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/crimson_planks.png"),self.load_image_texture("assets/minecraft/textures/block/crimson_planks.png"))
     if data == 7: # warped
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/warped_planks.png"),self.load_image_texture("assets/minecraft/textures/block/warped_planks.png"))
+    if data == 8: # cherry
+        return self.build_block(self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png"),self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png"))
+    if data == 9: # bamboo mosaic
+        return self.bamboo(self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"),self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"))
+    if data == 10: # warped
+        return self.build_block(self.load_image_texture("assets/minecraft/textures/block/bamboo_mosaic.png"),self.load_image_texture("assets/minecraft/textures/block/bamboo_mosaic.png"))
+    if data == 11: # mangrove
+        return self.build_block(self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png"),self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png"))
 
 @material(blockid=6, data=list(range(16)), transparent=True)
 def saplings(self, blockid, data):
@@ -1097,7 +1105,7 @@ block(blockid=15, top_image="assets/minecraft/textures/block/iron_ore.png")
 # coal ore
 block(blockid=16, top_image="assets/minecraft/textures/block/coal_ore.png")
 
-@material(blockid=[17, 162, 11306, 11307, 11308, 11309, 11310, 11311, 1008, 1009, 1126],
+@material(blockid=[17, 162, 11306, 11307, 11308, 11309, 11310, 11311, 1008, 1009, 1126, 1128, 1136],
           data=list(range(12)), solid=True)
 def wood(self, blockid, data):
     # extract orientation and wood type frorm data bits
@@ -1167,6 +1175,14 @@ def wood(self, blockid, data):
         1126: {
             0: ("mangrove_log_top.png", "mangrove_log.png"),
             1: ("stripped_mangrove_log_top.png", "stripped_mangrove_log.png"),
+        },
+        1128: {
+            0: ("cherry_log_top.png", "cherry_log.png"),
+            1: ("stripped_cherry_log_top.png", "stripped_cherry_log.png"),
+        },
+        1136: {
+            0: ("bamboo_block_top.png", "bamboo_block.png"),
+            1: ("stripped_bamboo_block_top.png", "stripped_bamboo_block.png"),
         },
     }
 
