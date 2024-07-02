@@ -6425,3 +6425,38 @@ def cherryleaves(self, blockid, data):
 block(blockid=1130, top_image="assets/minecraft/textures/block/sculk.png")
 block(blockid=1132, top_image="assets/minecraft/textures/block/sculk_catalyst_top.png",
       side_image="assets/minecraft/textures/block/sculk_catalyst_side.png")
+
+block(blockid=2100, top_image="assets/minecraft/textures/block/tuff_bricks.png")
+
+
+block(blockid=2101, top_image="assets/minecraft/textures/block/polished_tuff.png")
+block(blockid=2102, top_image="assets/minecraft/textures/block/chiseled_tuff_top.png",
+      side_image="assets/minecraft/textures/block/chiseled_tuff.png")
+block(blockid=2103, top_image="assets/minecraft/textures/block/chiseled_tuff_bricks_top.png",
+      side_image="assets/minecraft/textures/block/chiseled_tuff_bricks.png")      
+
+
+
+
+# Chiseled Copper
+block(blockid=[2120, 2121], top_image="assets/minecraft/textures/block/chiseled_copper.png")
+block(blockid=[2122, 2123], top_image="assets/minecraft/textures/block/exposed_chiseled_copper.png")
+block(blockid=[2124, 2125], top_image="assets/minecraft/textures/block/weathered_chiseled_copper.png")
+block(blockid=[2126, 2127], top_image="assets/minecraft/textures/block/oxidized_chiseled_copper.png")
+
+
+
+block(blockid=[2140], top_image="assets/minecraft/textures/block/copper_bulb.png")
+block(blockid=[2142], top_image="assets/minecraft/textures/block/exposed_copper_bulb.png")
+block(blockid=[2144], top_image="assets/minecraft/textures/block/weathered_copper_bulb.png")
+block(blockid=[2146], top_image="assets/minecraft/textures/block/oxidized_copper_bulb.png")
+
+block(blockid=[2141], top_image="assets/minecraft/textures/block/copper_bulb_lit.png")
+block(blockid=[2143], top_image="assets/minecraft/textures/block/exposed_copper_bulb_lit.png")
+block(blockid=[2145], top_image="assets/minecraft/textures/block/weathered_copper_bulb_lit.png")
+block(blockid=[2147], top_image="assets/minecraft/textures/block/oxidized_copper_bulb_lit.png")
+
+block(blockid=[1145], top_image="assets/minecraft/textures/block/suspicious_sand_0.png")
+block(blockid=[1146], top_image="assets/minecraft/textures/block/suspicious_gravel_0.png")
+
+

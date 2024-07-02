@@ -888,6 +888,35 @@ class RegionSet(object):
             'minecraft:bamboo_block': (1136, 0),
             'minecraft:stripped_bamboo_block' : (1136, 1),
 
+
+            'minecraft:suspicious_sand': (1145, 0),
+            'minecraft:suspicious_gravel': (1146, 0),
+
+
+            # 1.21 blocks
+            'minecraft:tuff_bricks': (2100, 0),
+            'minecraft:polished_tuff': (2101, 0),
+            'minecraft:chiseled_tuff': (2102, 0),
+            'minecraft:chiseled_tuff_bricks': (2103, 0),
+
+            'minecraft:chiseled_copper':   (2120, 0),
+            'minecraft:exposed_chiseled_copper':   (2122, 0),
+            'minecraft:weathered_chiseled_copper':   (2124, 0),
+            'minecraft:oxidized_chiseled_copper':   (2126, 0),
+            'minecraft:waxed_chiseled_copper':   (2121, 0),
+            'minecraft:waxed_exposed_chiseled_copper':   (2123, 0),
+            'minecraft:waxed_weathered_chiseled_copper':   (2125, 0),
+            'minecraft:waxed_oxidized_chiseled_copper':   (2127, 0),            
+            'minecraft:copper_bulb':   (2140, 0),
+            'minecraft:exposed_copper_bulb':   (2142, 0),
+            'minecraft:weathered_copper_bulb':   (2144, 0),
+            'minecraft:oxidized_copper_bulb':   (2146, 0),
+
+            'minecraft:waxed_copper_bulb':   (2140, 0),
+            'minecraft:waxed_exposed_copper_bulb':   (2142, 0),
+            'minecraft:waxed_weathered_copper_bulb':   (2144, 0),
+            'minecraft:waxed_oxidized_copper_bulb':   (2146, 0),
+
             # New blocks
             'minecraft:carved_pumpkin': (11300, 0),
             'minecraft:spruce_pressure_plate': (11301, 0),
@@ -1144,7 +1173,8 @@ class RegionSet(object):
 
         key = palette_entry['Name']
         (block, data) = self._blockmap[key]
-        if key in ['minecraft:redstone_ore', 'minecraft:redstone_lamp']:
+        if key in ['minecraft:redstone_ore', 'minecraft:redstone_lamp', 'minecraft:copper_bulb', 'minecraft:exposed_copper_bulb','minecraft:weathered_copper_bulb', 'minecraft:oxidized_copper_bulb',
+                   'minecraft:waxed_copper_bulb','minecraft:waxed_exposed_copper_bulb','minecraft:waxed_weathered_copper_bulb','minecraft:waxed_oxidized_copper_bulb']:
             if palette_entry['Properties']['lit'] == 'true':
                 block += 1
         elif key.endswith('gate'):
