@@ -888,6 +888,9 @@ class RegionSet(object):
             'minecraft:bamboo_block': (1136, 0),
             'minecraft:stripped_bamboo_block' : (1136, 1),
 
+            'minecraft:pearlescent_froglight': (1142, 0),
+            'minecraft:verdant_froglight': (1143, 0),
+            'minecraft:ochre_froglight': (1144, 0),
 
             'minecraft:suspicious_sand': (1145, 0),
             'minecraft:suspicious_gravel': (1146, 0),

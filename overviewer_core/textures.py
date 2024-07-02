@@ -6460,3 +6460,19 @@ block(blockid=[1145], top_image="assets/minecraft/textures/block/suspicious_sand
 block(blockid=[1146], top_image="assets/minecraft/textures/block/suspicious_gravel_0.png")
 
 
+
+# Froglight
+@material(blockid=[1142,1143,1144], data=list(range(3)), solid=True)
+def froglight(self, blockid, data):
+    if blockid == 1142:        
+        top=self.load_image_texture("assets/minecraft/textures/block/pearlescent_froglight_top.png")
+        side=self.load_image_texture("assets/minecraft/textures/block/pearlescent_froglight_side.png")
+    if blockid == 1143:        
+        top=self.load_image_texture("assets/minecraft/textures/block/verdant_froglight_top.png")
+        side=self.load_image_texture("assets/minecraft/textures/block/verdant_froglight_side.png")
+    else:
+        top=self.load_image_texture("assets/minecraft/textures/block/ochre_froglight_top.png")
+        side=self.load_image_texture("assets/minecraft/textures/block/ochre_froglight_side.png")
+
+    return self.build_axis_block(top, side, data)
+
