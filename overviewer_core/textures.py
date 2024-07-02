@@ -6390,3 +6390,17 @@ block(blockid=1125, top_image="assets/minecraft/textures/block/mangrove_roots_to
       side_image="assets/minecraft/textures/block/mangrove_roots_side.png")
 block(blockid=1127, top_image="assets/minecraft/textures/block/muddy_mangrove_roots_top.png",
       side_image="assets/minecraft/textures/block/muddy_mangrove_roots_side.png")
+
+
+@material(blockid=11509, transparent=True, nodata=True)
+def pinkpetals(self, blockid, data):
+    t = self.load_image_texture("assets/minecraft/textures/block/pink_petals.png").copy()
+    return self.build_full_block(None, None, None, None, None, t)
+
+@material(blockid=[1129], data=list(range(16)), transparent=True, solid=True)
+def cherryleaves(self, blockid, data):
+    # mask out the bits 4 and 8
+    # they are used for player placed and check-for-decay blocks
+    data = data & 0x7
+    t = self.load_image_texture("assets/minecraft/textures/block/cherry_leaves.png")
+    return self.build_block(t, t)
