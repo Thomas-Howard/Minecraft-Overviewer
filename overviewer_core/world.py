@@ -877,6 +877,7 @@ class RegionSet(object):
             'minecraft:mangrove_log': (1126, 0),
             'minecraft:stripped_mangrove_log': (1126, 1),
             'minecraft:muddy_mangrove_roots': (1127, 0),
+            'minecraft:tinted_glass': (1140, 0),
             'minecraft:sculk': (1130, 0),
             'minecraft:sculk_catalyst': (1132, 0),
             'minecraft:sculk_sensor': (1134, 0),
