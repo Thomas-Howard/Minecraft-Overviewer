@@ -999,7 +999,7 @@ def wooden_planks(self, blockid, data):
     if data == 8: # cherry
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png"),self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png"))
     if data == 9: # bamboo mosaic
-        return self.bamboo(self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"),self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"))
+        return self.build_block(self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"),self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png"))
     if data == 10: # warped
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/bamboo_mosaic.png"),self.load_image_texture("assets/minecraft/textures/block/bamboo_mosaic.png"))
     if data == 11: # mangrove
