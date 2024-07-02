@@ -524,6 +524,7 @@ enum mc_block_id {
     block_sweet_berry_bush = 11505,
     block_campfire = 11506,
     block_bell = 11507,
+    block_tinted_glass = 1140,
 
     block_spruce_trapdoor = 11332,
     block_birch_trapdoor = 11333,

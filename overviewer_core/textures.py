@@ -980,7 +980,7 @@ block(blockid=4, top_image="assets/minecraft/textures/block/cobblestone.png")
 # wooden planks
 @material(blockid=5, data=list(range(16)), solid=True)
 def wooden_planks(self, blockid, data):
-    if data == 0: # normal
+    if data == 0: # normal - oak
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/oak_planks.png"), self.load_image_texture("assets/minecraft/textures/block/oak_planks.png"))
     if data == 1: # pine
         return self.build_block(self.load_image_texture("assets/minecraft/textures/block/spruce_planks.png"),self.load_image_texture("assets/minecraft/textures/block/spruce_planks.png"))
@@ -1035,12 +1035,14 @@ block(blockid=7, top_image="assets/minecraft/textures/block/bedrock.png")
 
 # water, glass, and ice (no inner surfaces)
 # uses pseudo-ancildata found in iterate.c
-@material(blockid=[8, 9, 20, 79, 95], data=list(range(512)), fluid=(8, 9), transparent=True, nospawn=True, solid=(79, 20, 95))
+@material(blockid=[8, 9, 20, 79, 95, 1140], data=list(range(512)), fluid=(8, 9), transparent=False, nospawn=True, solid=(79, 20, 95, 1140))
 def no_inner_surfaces(self, blockid, data):
     if blockid == 8 or blockid == 9:
         texture = self.load_water()
     elif blockid == 20:
         texture = self.load_image_texture("assets/minecraft/textures/block/glass.png")
+    elif blockid == 1140:
+        texture = self.load_image_texture("assets/minecraft/textures/block/tinted_glass.png")
     elif blockid == 95:
         texture = self.load_image_texture("assets/minecraft/textures/block/%s_stained_glass.png" % color_map[data & 0x0f])
     else:

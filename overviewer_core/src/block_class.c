@@ -249,6 +249,7 @@ const mc_block_t block_class_ancil[] = {
     block_polished_blackstone_brick_wall,
     block_double_plant,
     block_stained_glass,
+    block_tinted_glass,
     block_cobbled_deepslate_wall,
     block_polished_deepslate_wall,
     block_deepslate_brick_wall,

@@ -264,19 +264,18 @@ generate_pseudo_data(RenderState* state, uint16_t ancilData) {
         if (get_data(state, BLOCKS, x, y + 1, z) != state->block)
             data |= 0x10;
         return data;
-    } else if (block_class_is_subset(state->block, (mc_block_t[]){block_glass, block_ice, block_stained_glass}, 3)) { /* glass and ice and stained glass*/
+    } else if (block_class_is_subset(state->block, (mc_block_t[]){block_glass, block_ice, block_stained_glass, block_tinted_glass}, 4)) { /* glass and ice and stained glass*/
         /* an aditional bit for top is added to the 4 bits of check_adjacent_blocks
          * Note that stained glass encodes 16 colors using 4 bits.  this pushes us over the 8-bits of an uint8_t, 
          * forcing us to use an uint16_t to hold 16 bits of pseudo ancil data
          * */
-        if ((get_data(state, BLOCKS, x, y + 1, z) == 20) || (get_data(state, BLOCKS, x, y + 1, z) == 95)) {
+        if ((get_data(state, BLOCKS, x, y + 1, z) == 20) || (get_data(state, BLOCKS, x, y + 1, z) == 95) || (get_data(state, BLOCKS, x, y + 1, z) == 1140)) {
             data = 0;
         } else {
             data = 16;
         }
         data = (check_adjacent_blocks(state, x, y, z, state->block) ^ 0x0f) | data;
         return (data << 4) | (ancilData & 0x0f);
-
     } else if (state->block == block_redstone_wire) { /* redstone */
         /* three addiotional bit are added, one for on/off state, and
          * another two for going-up redstone wire in the same block
