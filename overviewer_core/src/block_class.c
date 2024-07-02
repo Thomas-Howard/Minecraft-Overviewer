@@ -253,7 +253,15 @@ const mc_block_t block_class_ancil[] = {
     block_cobbled_deepslate_wall,
     block_polished_deepslate_wall,
     block_deepslate_brick_wall,
-    block_deepslate_tile_wall};
+    block_deepslate_tile_wall,
+    block_copper_grate,
+    block_exposed_copper_grate,
+    block_weathered_copper_grate,
+    block_oxidized_copper_grate,
+    block_waxed_copper_grate,
+    block_waxed_exposed_copper_grate,
+    block_waxed_weathered_copper_grate,
+    block_waxed_oxidized_copper_grate};
 const size_t block_class_ancil_len = COUNT_OF(block_class_ancil);
 
 const mc_block_t block_class_alt_height[] = {
@@ -358,3 +366,15 @@ const mc_block_t block_class_nether_roof[] = {
     block_nether_gold_ore,
     block_ancient_debris};
 const size_t block_class_nether_roof_len = COUNT_OF(block_class_nether_roof);
+
+const mc_block_t block_class_copper_grate[] = {
+    block_copper_grate,
+    block_exposed_copper_grate,
+    block_weathered_copper_grate,
+    block_oxidized_copper_grate,
+    block_waxed_copper_grate,
+    block_waxed_exposed_copper_grate,
+    block_waxed_weathered_copper_grate,
+    block_waxed_oxidized_copper_grate};
+const size_t block_class_copper_grate_len = COUNT_OF(block_class_copper_grate);
+

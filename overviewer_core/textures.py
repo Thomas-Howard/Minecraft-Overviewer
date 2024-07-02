@@ -6463,6 +6463,57 @@ block(blockid=[1146], top_image="assets/minecraft/textures/block/suspicious_grav
 
 
 
+# Copper Grates
+# uses pseudo-ancildata found in iterate.c
+#, 2132, 2133, 2134, 2135, 2136, 2137
+@material(blockid=[2130, 2131, 2132, 2133, 2134, 2135, 2136, 2137], data=list(range(512)), fluid=False, transparent=True, nospawn=True, solid=True)
+def copper_no_inner_surfaces(self, blockid, data):
+    if blockid in(2130, 2131):
+        texture = "assets/minecraft/textures/block/copper_grate.png"
+    if blockid in(2132, 2133):
+        texture = "assets/minecraft/textures/block/exposed_copper_grate.png"
+    if blockid in(2134, 2135):
+        texture = "assets/minecraft/textures/block/weathered_copper_grate.png"
+    if blockid in(2136, 2137):
+        texture = "assets/minecraft/textures/block/oxidized_copper_grate.png"
+
+    # now that we've used the lower 4 bits to get color, shift down to get the 5 bits that encode face hiding
+ #   if not (blockid == 8 or blockid == 9): # water doesn't have a shifted pseudodata
+    data = data >> 4
+    loaded_texture = self.load_image_texture(texture)    
+    #top = loaded_texture
+    if (data & 0b10000) == 16:
+        top = loaded_texture
+    else:
+        top = None
+        
+    if (data & 0b0001) == 1:
+        side1 = loaded_texture    # top left
+    else:
+        side1 = None
+    
+    if (data & 0b1000) == 8:
+        side2 = loaded_texture   # top right
+    else:
+        side2 = None
+      
+    if (data & 0b0010) == 2:
+        side3 = loaded_texture   # bottom left    
+    else:
+        side3 = None
+    
+    if (data & 0b0100) == 4:
+        side4 = loaded_texture    # bottom right
+    else:
+        side4 = None
+
+    img = self.build_full_block(top,None,None,side3,side4)
+   
+    # if nothing shown do not draw at all
+    if top is None and side3 is None and side4 is None:
+        return None
+    return img
+
 # Froglight
 @material(blockid=[1142,1143,1144], data=list(range(3)), solid=True)
 def froglight(self, blockid, data):

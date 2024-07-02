@@ -276,6 +276,18 @@ generate_pseudo_data(RenderState* state, uint16_t ancilData) {
         }
         data = (check_adjacent_blocks(state, x, y, z, state->block) ^ 0x0f) | data;
         return (data << 4) | (ancilData & 0x0f);
+    } else if (block_class_is_subset(state->block, block_class_copper_grate, block_class_copper_grate_len)) {
+        /* an aditional bit for top is added to the 4 bits of check_adjacent_blocks
+         * Note that stained glass encodes 16 colors using 4 bits.  this pushes us over the 8-bits of an uint8_t, 
+         * forcing us to use an uint16_t to hold 16 bits of pseudo ancil data
+         * */
+        if ((get_data(state, BLOCKS, x, y + 1, z) == state->block)) {
+            data = 0;
+        } else {
+            data = 16;
+        }
+        data = (check_adjacent_blocks(state, x, y, z, state->block) ^ 0x0f) | data;
+        return (data << 4) | (ancilData & 0x0f);
     } else if (state->block == block_redstone_wire) { /* redstone */
         /* three addiotional bit are added, one for on/off state, and
          * another two for going-up redstone wire in the same block

@@ -530,7 +530,16 @@ enum mc_block_id {
     block_birch_trapdoor = 11333,
     block_jungle_trapdoor = 11334,
     block_acacia_trapdoor = 11335,
-    block_dark_oak_trapdoor = 11336
+    block_dark_oak_trapdoor = 11336,
+
+    block_copper_grate = 2130,
+    block_exposed_copper_grate = 2132,
+    block_weathered_copper_grate = 2134,
+    block_oxidized_copper_grate = 2136,
+    block_waxed_copper_grate = 2131,
+    block_waxed_exposed_copper_grate = 2133,
+    block_waxed_weathered_copper_grate = 2135,
+    block_waxed_oxidized_copper_grate = 2137
 };
 
 typedef uint16_t mc_block_t;
