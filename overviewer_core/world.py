@@ -1080,6 +1080,16 @@ class RegionSet(object):
             'minecraft:polished_deepslate_wall': (1810, 0),
             'minecraft:deepslate_brick_wall': (1811, 0),
             'minecraft:deepslate_tile_wall': (1812, 0),
+
+            'minecraft:mangrove_slab': (2200, 0),
+            'minecraft:cherry_slab': (2201, 0),
+            'minecraft:bamboo_slab': (2202, 0),
+            'minecraft:bamboo_mosaic_slab': (2203, 0),
+            'minecraft:tuff_slab': (2204, 0),
+            'minecraft:polished_tuff_slab': (2205, 0),
+            'minecraft:tuff_brick_slab': (2206, 0),
+
+            
         }
 
         colors = [   'white', 'orange', 'magenta', 'light_blue',

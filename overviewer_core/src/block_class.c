@@ -351,7 +351,14 @@ const mc_block_t block_class_alt_height[] = {
     block_polished_deepslate_slab,
     block_deepslate_brick_slab,
     block_deepslate_tile_slab,
-    block_mud_brick_slab};
+    block_mud_brick_slab,
+    block_mangrove_slab,
+    block_cherry_slab,
+    block_bamboo_slab,
+    block_bamboo_mosaic_slab,
+    block_tuff_slab,
+    block_polished_tuff_slab,
+    block_tuff_brick_slab};
 const size_t block_class_alt_height_len = COUNT_OF(block_class_alt_height);
 
 const mc_block_t block_class_nether_roof[] = {

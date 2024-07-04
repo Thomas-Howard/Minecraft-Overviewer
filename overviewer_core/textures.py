@@ -1723,10 +1723,10 @@ block(blockid=42, top_image="assets/minecraft/textures/block/iron_block.png")
 # these wooden slabs are unobtainable without cheating, they are still
 # here because lots of pre-1.3 worlds use this blocks, add prismarine slabs
 @material(blockid=[43, 44, 181, 182, 204, 205, 1124] + list(range(11340, 11359)) +
-          list(range(1027, 1030)) + list(range(1072, 1080)) + list(range(1103, 1107)),
+          list(range(1027, 1030)) + list(range(1072, 1080)) + list(range(1103, 1107)) + list(range(2200, 2207)),
           data=list(range(16)),
           transparent=[44, 182, 205, 1124] + list(range(11340, 11359)) + list(range(1027, 1030)) +
-          list(range(1072, 1080)) + list(range(1103, 1107)), solid=True)
+          list(range(1072, 1080)) + list(range(1103, 1107)) + list(range(2200, 2207)) , solid=True)
 def slabs(self, blockid, data):
     if blockid == 44 or blockid == 182: 
         texture = data & 7
@@ -1822,6 +1822,20 @@ def slabs(self, blockid, data):
         top = side  = self.load_image_texture("assets/minecraft/textures/block/polished_blackstone.png").copy()
     elif blockid == 1029: #  polished_blackstone_brick_slab
         top = side  = self.load_image_texture("assets/minecraft/textures/block/polished_blackstone_bricks.png").copy()
+    elif blockid == 2200: #  mangrove_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png").copy()
+    elif blockid == 2201: #  cherry_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png").copy()
+    elif blockid == 2202: #  bamboo_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png").copy()
+    elif blockid == 2203: #  bamboo_mosaic_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/bamboo_mosaic.png").copy()
+    elif blockid == 2204: #  tuff_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/tuff.png").copy()
+    elif blockid == 2205: #  polished_tuff_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/polished_tuff.png").copy()
+    elif blockid == 2206: #  tuff_brick_slab
+        top = side  = self.load_image_texture("assets/minecraft/textures/block/tuff_bricks.png").copy()
     elif blockid in range(1072, 1080):
         copper_tex = {
             1072: "assets/minecraft/textures/block/cut_copper.png",
