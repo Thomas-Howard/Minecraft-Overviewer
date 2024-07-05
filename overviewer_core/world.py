@@ -1109,6 +1109,34 @@ class RegionSet(object):
             'minecraft:mangrove_fence_gate': (2222, 0),
             'minecraft:cherry_fence_gate': (2223, 0),
             'minecraft:bamboo_fence_gate': (2224, 0),
+
+
+            'minecraft:copper_door': (2225, 0),
+            'minecraft:exposed_copper_door': (2226, 0),
+            'minecraft:weathered_copper_door': (2227, 0),
+            'minecraft:oxidized_copper_door': (2228, 0),
+            'minecraft:waxed_copper_door': (2229, 0),
+            'minecraft:waxed_exposed_copper_door': (2230, 0),
+            'minecraft:waxed_weathered_copper_door': (2231, 0),
+            'minecraft:waxed_oxidized_copper_door': (2232, 0),
+            'minecraft:bamboo_door': (2233, 0),
+            'minecraft:mangrove_door': (2234, 0),
+            'minecraft:cherry_door': (2235, 0),
+
+            'minecraft:copper_trapdoor': (2236, 0),
+            'minecraft:exposed_copper_trapdoor': (2237, 0),
+            'minecraft:weathered_copper_trapdoor': (2238, 0),
+            'minecraft:oxidized_copper_trapdoor': (2239, 0),
+            'minecraft:waxed_copper_trapdoor': (2240, 0),
+            'minecraft:waxed_exposed_copper_trapdoor': (2241, 0),
+            'minecraft:waxed_weathered_copper_trapdoor': (2242, 0),
+            'minecraft:waxed_oxidized_copper_trapdoor': (2243, 0),
+            'minecraft:bamboo_trapdoor': (2244, 0),
+            'minecraft:mangrove_trapdoor': (2245, 0),
+            'minecraft:cherry_trapdoor': (2246, 0),
+            'minecraft:bamboo_pressure_plate': (2247, 0),
+            'minecraft:mangrove_pressure_plate': (2248, 0),
+            'minecraft:cherry_pressure_plate': (2249, 0),
             
         }
 

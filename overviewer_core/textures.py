@@ -3013,7 +3013,7 @@ def signpost(self, blockid, data):
 
 # wooden and iron door
 # uses pseudo-ancildata found in iterate.c
-@material(blockid=[64,71,193,194,195,196,197, 499, 500], data=list(range(32)), transparent=True)
+@material(blockid=[64,71,193,194,195,196,197, 499, 500, 2225, 2226, 2227, 2228, 2229, 2230, 2231, 2232, 2233, 2234, 2235], data=list(range(32)), transparent=True)
 def door(self, blockid, data):
     #Masked to not clobber block top/bottom & swung info
     if self.rotation == 1:
@@ -3051,6 +3051,28 @@ def door(self, blockid, data):
             raw_door = self.load_image_texture("assets/minecraft/textures/block/crimson_door_top.png")
         elif blockid == 500: # warped door
             raw_door = self.load_image_texture("assets/minecraft/textures/block/warped_door_top.png")
+        elif blockid == 2225: #  copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/copper_door_top.png").copy()
+        elif blockid == 2226: #  exposed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/exposed_copper_door_top.png").copy()
+        elif blockid == 2227: #  weathered_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/weathered_copper_door_top.png").copy()
+        elif blockid == 2228: #  oxidized_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/oxidized_copper_door_top.png").copy()
+        elif blockid == 2229: #  waxed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/copper_door_top.png").copy()
+        elif blockid == 2230: #  waxed_exposed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/exposed_copper_door_top.png").copy()
+        elif blockid == 2231: #  waxed_weathered_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/weathered_copper_door_top.png").copy()
+        elif blockid == 2232: #  waxed_oxidized_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/oxidized_copper_door_top.png").copy()
+        elif blockid == 2233: #  bamboo_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/bamboo_door_top.png").copy()
+        elif blockid == 2234: #  mangrove_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/mangrove_door_top.png").copy()
+        elif blockid == 2235: #  cherry_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/cherry_door_top.png").copy()
     else: # bottom of the door
         if blockid == 64:
             raw_door = self.load_image_texture("assets/minecraft/textures/block/oak_door_bottom.png")
@@ -3070,7 +3092,28 @@ def door(self, blockid, data):
             raw_door = self.load_image_texture("assets/minecraft/textures/block/crimson_door_bottom.png")
         elif blockid == 500: # warped door
             raw_door = self.load_image_texture("assets/minecraft/textures/block/warped_door_bottom.png")
-
+        elif blockid == 2225: #  copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/copper_door_bottom.png").copy()
+        elif blockid == 2226: #  exposed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/exposed_copper_door_bottom.png").copy()
+        elif blockid == 2227: #  weathered_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/weathered_copper_door_bottom.png").copy()
+        elif blockid == 2228: #  oxidized_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/oxidized_copper_door_bottom.png").copy()
+        elif blockid == 2229: #  waxed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/copper_door_bottom.png").copy()
+        elif blockid == 2230: #  waxed_exposed_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/exposed_copper_door_bottom.png").copy()
+        elif blockid == 2231: #  waxed_weathered_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/weathered_copper_door_bottom.png").copy()
+        elif blockid == 2232: #  waxed_oxidized_copper_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/oxidized_copper_door_bottom.png").copy()
+        elif blockid == 2233: #  bamboo_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/bamboo_door_bottom.png").copy()
+        elif blockid == 2234: #  mangrove_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/mangrove_door_bottom.png").copy()
+        elif blockid == 2235: #  cherry_door
+            raw_door = self.load_image_texture("assets/minecraft/textures/block/cherry_door_bottom.png").copy()
     # if you want to render all doors as closed, then force
     # force closed to be True
     if data & 0x4 == 0x4:
@@ -3425,7 +3468,7 @@ def levers(self, blockid, data):
     return img
 
 # wooden and stone pressure plates, and weighted pressure plates
-@material(blockid=[70, 72,147,148,11301,11302,11303,11304,11305, 1033,11517,11518], data=[0,1], transparent=True)
+@material(blockid=[70, 72,147,148,11301,11302,11303,11304,11305,1033,11517,11518,2247,2248,2249], data=[0,1], transparent=True)
 def pressure_plate(self, blockid, data):
     texture_name = {70:"assets/minecraft/textures/block/stone.png",              # stone
                     72:"assets/minecraft/textures/block/oak_planks.png",         # oak
@@ -3438,6 +3481,9 @@ def pressure_plate(self, blockid, data):
                     11518:"assets/minecraft/textures/block/warped_planks.png",   # warped
                     147:"assets/minecraft/textures/block/gold_block.png",        # light golden
                     148:"assets/minecraft/textures/block/iron_block.png",        # heavy iron
+                    2247: "assets/minecraft/textures/block/bamboo_planks.png",
+                    2248: "assets/minecraft/textures/block/mangrove_planks.png",
+                    2249: "assets/minecraft/textures/block/cherry_planks.png",
                     1033:"assets/minecraft/textures/block/polished_blackstone.png"
                    }[blockid]
     t = self.load_image_texture(texture_name).copy()
@@ -4276,7 +4322,7 @@ def comparator(self, blockid, data):
     
 # trapdoor
 # the trapdoor is looks like a sprite when opened, that's not good
-@material(blockid=[96,167,11332,11333,11334,11335,11336,12501,12502], data=list(range(16)), transparent=True, nospawn=True)
+@material(blockid=[96,167,11332,11333,11334,11335,11336,12501,12502, 2236, 2237, 2238, 2239, 2240, 2241, 2242, 2243, 2244, 2245, 2246], data=list(range(16)), transparent=True, nospawn=True)
 def trapdoor(self, blockid, data):
 
     # rotation
@@ -4307,6 +4353,17 @@ def trapdoor(self, blockid, data):
                    11336:"assets/minecraft/textures/block/dark_oak_trapdoor.png",
                    12501:"assets/minecraft/textures/block/crimson_trapdoor.png",
                    12502:"assets/minecraft/textures/block/warped_trapdoor.png",
+                   2236: "assets/minecraft/textures/block/copper_trapdoor.png",
+                   2237: "assets/minecraft/textures/block/exposed_copper_trapdoor.png",
+                   2238: "assets/minecraft/textures/block/weathered_copper_trapdoor.png",
+                   2239: "assets/minecraft/textures/block/oxidized_copper_trapdoor.png",
+                   2240: "assets/minecraft/textures/block/copper_trapdoor.png",
+                   2241: "assets/minecraft/textures/block/exposed_copper_trapdoor.png",
+                   2242: "assets/minecraft/textures/block/weathered_copper_trapdoor.png",
+                   2243: "assets/minecraft/textures/block/oxidized_copper_trapdoor.png",
+                   2244: "assets/minecraft/textures/block/bamboo_trapdoor.png",
+                   2245: "assets/minecraft/textures/block/mangrove_trapdoor.png",
+                   2246: "assets/minecraft/textures/block/cherry_trapdoor.png",
                   }[blockid]
 
     if data & 0x4 == 0x4: # opened trapdoor
