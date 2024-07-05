@@ -1088,6 +1088,15 @@ class RegionSet(object):
             'minecraft:tuff_slab': (2204, 0),
             'minecraft:polished_tuff_slab': (2205, 0),
             'minecraft:tuff_brick_slab': (2206, 0),
+            
+            'minecraft:mangrove_stairs': (2207, 0),
+            'minecraft:cherry_stairs': (2208, 0),
+            'minecraft:bamboo_stairs': (2209, 0),
+            'minecraft:bamboo_mosaic_stairs': (2210, 0),
+            'minecraft:tuff_stairs': (2211, 0),
+            'minecraft:polished_tuff_stairs': (2212, 0),
+            'minecraft:tuff_brick_stairs': (2213, 0),
+            'minecraft:mud_brick_stairs': (2214, 0),
 
             
         }

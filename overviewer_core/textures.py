@@ -2121,7 +2121,8 @@ block(blockid=52, top_image="assets/minecraft/textures/block/spawner.png", trans
 @material(blockid=[53, 67, 108, 109, 114, 128, 134, 135, 136, 156, 163, 164, 180, 203, 509, 510,
                    11337, 11338, 11339, 11370, 11371, 11374, 11375, 11376, 11377, 11378, 11379,
                    11380, 11381, 11382, 11383, 11384, 11415, 1030, 1031, 1032, 1064, 1065, 1066,
-                   1067, 1068, 1069, 1070, 1071, 1099, 1100, 1101, 1102],
+                   1067, 1068, 1069, 1070, 1071, 1099, 1100, 1101, 1102, 2207, 2208, 2209, 2210,
+                   2211, 2212, 2213, 2214],
           data=list(range(128)), transparent=True, solid=True, nospawn=True)
 def stairs(self, blockid, data):
     # preserve the upside-down bit
@@ -2187,6 +2188,15 @@ def stairs(self, blockid, data):
         1100: "assets/minecraft/textures/block/polished_deepslate.png",
         1101: "assets/minecraft/textures/block/deepslate_bricks.png",
         1102: "assets/minecraft/textures/block/deepslate_tiles.png",
+        
+        2207: "assets/minecraft/textures/block/mangrove_planks.png",
+        2208: "assets/minecraft/textures/block/cherry_planks.png",
+        2209: "assets/minecraft/textures/block/bamboo_planks.png",
+        2210: "assets/minecraft/textures/block/bamboo_mosaic.png",
+        2211: "assets/minecraft/textures/block/tuff.png",
+        2212: "assets/minecraft/textures/block/polished_tuff.png",
+        2213: "assets/minecraft/textures/block/tuff_bricks.png",
+        2214: "assets/minecraft/textures/block/mud_bricks.png",
     }
 
     texture = self.load_image_texture(stair_id_to_tex[blockid]).copy()
@@ -4977,7 +4987,7 @@ def beacon(self, blockid, data):
 @material(blockid=[199]+list(range(1792, 1812 + 1)), data=list(range(32)), transparent=True, nospawn=True)
 def cobblestone_wall(self, blockid, data):
     walls_id_to_tex = {
-          199: "assets/minecraft/textures/block/chorus_plant.png", # chorus plants
+        199: "assets/minecraft/textures/block/chorus_plant.png", # chorus plants
         1792: "assets/minecraft/textures/block/andesite.png",
         1793: "assets/minecraft/textures/block/bricks.png",
         1794: "assets/minecraft/textures/block/cobblestone.png",
