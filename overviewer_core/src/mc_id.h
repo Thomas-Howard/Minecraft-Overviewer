@@ -584,6 +584,8 @@ enum mc_block_id {
     block_mangrove_pressure_plate = 2248,
     block_cherry_pressure_plate = 2249,
 
+    block_vault = 11509,
+
     block_copper_grate = 2130,
     block_exposed_copper_grate = 2132,
     block_weathered_copper_grate = 2134,

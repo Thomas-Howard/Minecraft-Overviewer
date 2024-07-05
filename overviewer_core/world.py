@@ -1137,6 +1137,9 @@ class RegionSet(object):
             'minecraft:bamboo_pressure_plate': (2247, 0),
             'minecraft:mangrove_pressure_plate': (2248, 0),
             'minecraft:cherry_pressure_plate': (2249, 0),
+            'minecraft:trial_spawner': (11508, 0),
+            'minecraft:vault': (11509, 0),
+            'minecraft:reinforced_deepslate': (11510, 0),
             
         }
 
@@ -1166,8 +1169,9 @@ class RegionSet(object):
         return "<RegionSet regiondir=%r>" % self.regiondir
 
     def _get_block(self, palette_entry):
-        wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab',
-                        'minecraft:acacia_slab','minecraft:dark_oak_slab','minecraft:petrified_oak_slab', 'minecraft:crimson_slab', 'minecraft:warped_slab')
+        wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab', 'minecraft:acacia_slab',
+                        'minecraft:dark_oak_slab','minecraft:petrified_oak_slab', 'minecraft:crimson_slab', 'minecraft:warped_slab',
+                        'minecraft:mangrove_slab', 'minecraft:cherry_slab', 'minecraft:bamboo_slab', 'minecraft:bamboo_mosaic_slab')
         stone_slabs = ('minecraft:stone_slab', 'minecraft:sandstone_slab','minecraft:red_sandstone_slab',
                         'minecraft:cobblestone_slab', 'minecraft:brick_slab','minecraft:purpur_slab',
                         'minecraft:stone_brick_slab', 'minecraft:nether_brick_slab',
@@ -1182,7 +1186,9 @@ class RegionSet(object):
                         'minecraft:blackstone_slab','minecraft:polished_blackstone_slab',
                         'minecraft:polished_blackstone_brick_slab', 'minecraft:cobbled_deepslate_slab',
                         'minecraft:polished_deepslate_slab', 'minecraft:deepslate_brick_slab',
-                        'minecraft:deepslate_tile_slab', 'minecraft:mud_brick_slab'
+                        'minecraft:deepslate_tile_slab', 'minecraft:mud_brick_slab',
+                        'minecraft:tuff_slab', 'minecraft:polished_tuff_slab',
+                        'minecraft:tuff_brick_slab'
                          )
 
         prismarine_slabs = ('minecraft:prismarine_slab','minecraft:dark_prismarine_slab','minecraft:prismarine_brick_slab')
@@ -1241,6 +1247,13 @@ class RegionSet(object):
             'minecraft:prismarine_slab': 'minecraft:prismarine',
             'minecraft:dark_prismarine_slab': 'minecraft:dark_prismarine',
             'minecraft:prismarine_brick_slab': 'minecraft:prismarine_bricks',
+            'minecraft:mangrove_slab': 'minecraft:mangrove_planks', 
+            'minecraft:cherry_slab': 'minecraft:cherry_planks', 
+            'minecraft:bamboo_slab': 'minecraft:bamboo_planks',
+            'minecraft:bamboo_mosaic_slab': 'minecraft:bamboo_mosaic', 
+            'minecraft:tuff_slab': 'minecraft:tuff',
+            'minecraft:polished_tuff_slab': 'minecraft:polished_tuff',
+            'minecraft:tuff_brick_slab': 'minecraft:tuff_brick' 
         }
 
         colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
@@ -1359,7 +1372,7 @@ class RegionSet(object):
             else:
                 data = 5
         elif (key in ['minecraft:carved_pumpkin', 'minecraft:jack_o_lantern',
-                      'minecraft:stonecutter', 'minecraft:loom'] or
+                      'minecraft:stonecutter', 'minecraft:loom', 'minecraft:vault'] or
               key.endswith('glazed_terracotta')):
             facing = palette_entry['Properties']['facing']
             data = {'south': 0, 'west': 1, 'north': 2, 'east': 3}[facing]

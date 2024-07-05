@@ -6565,6 +6565,12 @@ block(blockid=[2147], top_image="assets/minecraft/textures/block/oxidized_copper
 block(blockid=[1145], top_image="assets/minecraft/textures/block/suspicious_sand_0.png")
 block(blockid=[1146], top_image="assets/minecraft/textures/block/suspicious_gravel_0.png")
 
+block(blockid=11508, top_image="assets/minecraft/textures/block/trial_spawner_top_inactive.png",
+      side_image="assets/minecraft/textures/block/trial_spawner_side_inactive.png")    
+
+
+block(blockid=11510, top_image="assets/minecraft/textures/block/reinforced_deepslate_top.png",
+      side_image="assets/minecraft/textures/block/reinforced_deepslate_side.png")    
 
 
 # Copper Grates
@@ -6679,3 +6685,38 @@ def sculk_vein(self, blockid, data):
     else: # self.rotation == 3:
         return self.build_full_block(top, east, south, north, west, bottom)
     
+
+
+@material(blockid=[11509], data=list(range(4)), solid=True)
+def vault(self, blockid, data): # vault
+    if self.rotation == 1:
+        if data == 0: data = 1
+        elif data == 1: data = 2
+        elif data == 2: data = 3
+        elif data == 3: data = 0
+    elif self.rotation == 2:
+        if data == 0: data = 2
+        elif data == 1: data = 3
+        elif data == 2: data = 0
+        elif data == 3: data = 1
+    elif self.rotation == 3:
+        if data == 0: data = 3
+        elif data == 1: data = 0
+        elif data == 2: data = 1
+        elif data == 3: data = 2
+    
+    # texture generation
+    top = self.load_image_texture("assets/minecraft/textures/block/vault_top.png")
+    front = self.load_image_texture("assets/minecraft/textures/block/vault_front_off.png")
+    side = self.load_image_texture("assets/minecraft/textures/block/vault_side_off.png")
+
+    if data == 0: # pointing west
+        img = self.build_full_block(top, None, None, side, front)
+
+    elif data == 1: # pointing north
+        img = self.build_full_block(top, None, None, front, side)
+
+    else: # in any other direction the front can't be seen
+        img = self.build_full_block(top, None, None, side, side)
+
+    return img
