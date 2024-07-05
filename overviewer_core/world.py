@@ -1080,6 +1080,10 @@ class RegionSet(object):
             'minecraft:polished_deepslate_wall': (1810, 0),
             'minecraft:deepslate_brick_wall': (1811, 0),
             'minecraft:deepslate_tile_wall': (1812, 0),
+            'minecraft:tuff_wall': (1813, 0),
+            'minecraft:polished_tuff_wall': (1814, 0),
+            'minecraft:tuff_brick_wall': (1815, 0),
+            'minecraft:mud_brick_wall': (1816, 0),            
 
             'minecraft:mangrove_slab': (2200, 0),
             'minecraft:cherry_slab': (2201, 0),
@@ -1098,6 +1102,13 @@ class RegionSet(object):
             'minecraft:tuff_brick_stairs': (2213, 0),
             'minecraft:mud_brick_stairs': (2214, 0),
 
+            'minecraft:mangrove_fence': (2219, 0),
+            'minecraft:cherry_fence': (2220, 0),
+            'minecraft:bamboo_fence': (2221, 0),
+
+            'minecraft:mangrove_fence_gate': (2222, 0),
+            'minecraft:cherry_fence_gate': (2223, 0),
+            'minecraft:bamboo_fence_gate': (2224, 0),
             
         }
 

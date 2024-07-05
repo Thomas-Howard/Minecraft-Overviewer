@@ -3720,7 +3720,7 @@ def jukebox(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/minecraft/textures/block/jukebox_top.png"), self.load_image_texture("assets/minecraft/textures/block/note_block.png"))
 
 # nether and normal fences
-@material(blockid=[85, 188, 189, 190, 191, 192, 113, 511, 512], data=list(range(16)), transparent=True, nospawn=True)
+@material(blockid=[85, 188, 189, 190, 191, 192, 113, 511, 512, 2219, 2220, 2221], data=list(range(16)), transparent=True, nospawn=True)
 def fence(self, blockid, data):
     # create needed images for Big stick fence
     if blockid == 85: # normal fence
@@ -3755,10 +3755,23 @@ def fence(self, blockid, data):
         fence_top = self.load_image_texture("assets/minecraft/textures/block/warped_planks.png").copy()
         fence_side = self.load_image_texture("assets/minecraft/textures/block/warped_planks.png").copy()
         fence_small_side = self.load_image_texture("assets/minecraft/textures/block/warped_planks.png").copy()
+    elif blockid == 2219: # mangrove_fence
+        fence_top = self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png").copy()
+        fence_side = self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png").copy()
+        fence_small_side = self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png").copy()
+    elif blockid == 2220: # cherry_fence
+        fence_top = self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png").copy()
+        fence_side = self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png").copy()
+        fence_small_side = self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png").copy()
+    elif blockid == 2221: # bamboo_fence
+        fence_top = self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png").copy()
+        fence_side = self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png").copy()
+        fence_small_side = self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png").copy()
     else: # netherbrick fence
         fence_top = self.load_image_texture("assets/minecraft/textures/block/nether_bricks.png").copy()
         fence_side = self.load_image_texture("assets/minecraft/textures/block/nether_bricks.png").copy()
         fence_small_side = self.load_image_texture("assets/minecraft/textures/block/nether_bricks.png").copy()
+        
 
     # generate the textures of the fence
     ImageDraw.Draw(fence_top).rectangle((0,0,5,15),outline=(0,0,0,0),fill=(0,0,0,0))
@@ -4525,7 +4538,7 @@ def vines(self, blockid, data):
 
 
 # fence gates
-@material(blockid=[107, 183, 184, 185, 186, 187, 513, 514], data=list(range(8)), transparent=True, nospawn=True)
+@material(blockid=[107, 183, 184, 185, 186, 187, 513, 514, 2222, 2223, 2224], data=list(range(8)), transparent=True, nospawn=True)
 def fence_gate(self, blockid, data):
 
     # rotation
@@ -4568,6 +4581,12 @@ def fence_gate(self, blockid, data):
         gate_side = self.load_image_texture("assets/minecraft/textures/block/crimson_planks.png").copy()
     elif blockid == 514: # Warped
         gate_side = self.load_image_texture("assets/minecraft/textures/block/warped_planks.png").copy()
+    elif blockid == 2222: #  mangrove_gate
+        gate_side = self.load_image_texture("assets/minecraft/textures/block/mangrove_planks.png").copy()
+    elif blockid == 2223: #  cherry_gate
+        gate_side = self.load_image_texture("assets/minecraft/textures/block/cherry_planks.png").copy()
+    elif blockid == 2224: #  bamboo_gate
+        gate_side = self.load_image_texture("assets/minecraft/textures/block/bamboo_planks.png").copy()
     else:
         return None
 
@@ -4984,7 +5003,7 @@ def beacon(self, blockid, data):
 
 # cobblestone and mossy cobblestone walls, chorus plants, mossy stone brick walls
 # one additional bit of data value added for mossy and cobblestone
-@material(blockid=[199]+list(range(1792, 1812 + 1)), data=list(range(32)), transparent=True, nospawn=True)
+@material(blockid=[199]+list(range(1792, 1816 + 1)), data=list(range(32)), transparent=True, nospawn=True)
 def cobblestone_wall(self, blockid, data):
     walls_id_to_tex = {
         199: "assets/minecraft/textures/block/chorus_plant.png", # chorus plants
@@ -5009,6 +5028,10 @@ def cobblestone_wall(self, blockid, data):
         1810: "assets/minecraft/textures/block/polished_deepslate.png",
         1811: "assets/minecraft/textures/block/deepslate_bricks.png",
         1812: "assets/minecraft/textures/block/deepslate_tiles.png",
+        1813: "assets/minecraft/textures/block/tuff.png",
+        1814: "assets/minecraft/textures/block/polished_tuff.png",
+        1815: "assets/minecraft/textures/block/tuff_bricks.png",
+        1816: "assets/minecraft/textures/block/mud_bricks.png",
     }
     t = self.load_image_texture(walls_id_to_tex[blockid]).copy()
 

@@ -438,6 +438,10 @@ enum mc_block_id {
     block_polished_deepslate_wall = 1810,
     block_deepslate_brick_wall = 1811,
     block_deepslate_tile_wall = 1812,
+    block_tuff_wall = 1813,
+    block_polished_tuff_wall = 1814,
+    block_tuff_brick_wall = 1815,
+    block_mud_brick_wall = 1816,
     // end of walls
 
     block_prismarine_stairs = 11337,
@@ -506,6 +510,10 @@ enum mc_block_id {
     block_polished_tuff_stairs = 2212,
     block_tuff_brick_stairs = 2213,
     block_mud_brick_stairs = 2214,
+
+    block_mangrove_fence_gate = 2222,
+    block_cherry_fence_gate = 2223,
+    block_bamboo_fence_gate = 2224,
 
     block_oak_sapling = 11385,
     block_spruce_sapling = 11386,
