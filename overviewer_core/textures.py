@@ -6641,18 +6641,28 @@ def froglight(self, blockid, data):
 
 
 # Sculk Sensors
-@material(blockid=[1134,1135], transparent=True, nodata=True)
-def enchantment_table(self, blockid, data):
+@material(blockid=[1134,1135], data=list(range(4)), transparent=True)
+def sculk_sensor(self, blockid, data):
     if blockid == 1135:        
         top=self.load_image_texture("assets/minecraft/textures/block/calibrated_sculk_sensor_top.png")
-        side1=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
-        side2=self.load_image_texture("assets/minecraft/textures/block/calibrated_sculk_sensor_input_side.png")
+        side=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
+        front=self.load_image_texture("assets/minecraft/textures/block/calibrated_sculk_sensor_input_side.png")
+
+        
+        if data == 0: # pointing north
+            img = self.build_full_block((top.rotate(180),8), None, None, side, side)
+        elif data == 1: # pointing east
+            img = self.build_full_block((top.rotate(90),8), None, None, side, side)
+        elif data == 2: # pointing south
+            img = self.build_full_block((top,8), None, None, side, front)
+        elif data == 3: # pointing west
+            img = self.build_full_block((top.rotate(270),8), None, None, front, side)
+        #img = self.build_full_block((top, 8), None, None, side, side)
     else:
         top=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_top.png")
-        side1=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
-        side2=side1
+        side=self.load_image_texture("assets/minecraft/textures/block/sculk_sensor_side.png")
+        img = self.build_full_block((top, 8), None, None, side, side)
 
-    img = self.build_full_block((top, 8), None, None, side1, side2)
     return img
 
 # Sculk Shrieker
@@ -6687,36 +6697,22 @@ def sculk_vein(self, blockid, data):
     
 
 
-@material(blockid=[11509], data=list(range(4)), solid=True)
-def vault(self, blockid, data): # vault
-    if self.rotation == 1:
-        if data == 0: data = 1
-        elif data == 1: data = 2
-        elif data == 2: data = 3
-        elif data == 3: data = 0
-    elif self.rotation == 2:
-        if data == 0: data = 2
-        elif data == 1: data = 3
-        elif data == 2: data = 0
-        elif data == 3: data = 1
-    elif self.rotation == 3:
-        if data == 0: data = 3
-        elif data == 1: data = 0
-        elif data == 2: data = 1
-        elif data == 3: data = 2
-    
+@material(blockid=[11511], data=list(range(4)), transparent=True)
+def vault(self, blockid, data): # vault    
+    #logging.warning("Vault Data: %s ", data)
     # texture generation
     top = self.load_image_texture("assets/minecraft/textures/block/vault_top.png")
-    front = self.load_image_texture("assets/minecraft/textures/block/vault_front_off.png")
+    front = self.load_image_texture("assets/minecraft/textures/block/vault_front_off.png")    
     side = self.load_image_texture("assets/minecraft/textures/block/vault_side_off.png")
 
-    if data == 0: # pointing west
+    if data == 0: # pointing north
         img = self.build_full_block(top, None, None, side, front)
-
-    elif data == 1: # pointing north
+    elif data == 1: # pointing east
         img = self.build_full_block(top, None, None, front, side)
-
-    else: # in any other direction the front can't be seen
+    elif data == 2: # pointing south
         img = self.build_full_block(top, None, None, side, side)
+    elif data == 3: # pointing west
+        img = self.build_full_block(top, None, None, side, side)
+
 
     return img

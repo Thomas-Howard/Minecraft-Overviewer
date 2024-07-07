@@ -1137,9 +1137,9 @@ class RegionSet(object):
             'minecraft:bamboo_pressure_plate': (2247, 0),
             'minecraft:mangrove_pressure_plate': (2248, 0),
             'minecraft:cherry_pressure_plate': (2249, 0),
-            'minecraft:trial_spawner': (11508, 0),
-            'minecraft:vault': (11509, 0),
+            'minecraft:trial_spawner': (11508, 0),            
             'minecraft:reinforced_deepslate': (11510, 0),
+            'minecraft:vault': (11511, 0),
             
         }
 
@@ -1372,7 +1372,7 @@ class RegionSet(object):
             else:
                 data = 5
         elif (key in ['minecraft:carved_pumpkin', 'minecraft:jack_o_lantern',
-                      'minecraft:stonecutter', 'minecraft:loom', 'minecraft:vault'] or
+                      'minecraft:stonecutter', 'minecraft:loom'] or
               key.endswith('glazed_terracotta')):
             facing = palette_entry['Properties']['facing']
             data = {'south': 0, 'west': 1, 'north': 2, 'east': 3}[facing]
@@ -1482,7 +1482,8 @@ class RegionSet(object):
             # A moisture level of 7 has a different texture from other farmland
             data = 1 if palette_entry['Properties'].get('moisture', '0') == '7' else 0
         elif key in ['minecraft:grindstone', 'minecraft:lectern', 'minecraft:campfire',
-                     'minecraft:bell', 'minecraft:soul_campfire']:
+                     'minecraft:bell', 'minecraft:soul_campfire', 'minecraft:vault',
+                     'minecraft:calibrated_sculk_sensor']:
             p = palette_entry['Properties']
             data = {'south': 0, 'west': 1, 'north': 2, 'east': 3}[p['facing']]
             if key == 'minecraft:grindstone':
