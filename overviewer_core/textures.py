@@ -1035,7 +1035,7 @@ block(blockid=7, top_image="assets/minecraft/textures/block/bedrock.png")
 
 # water, glass, and ice (no inner surfaces)
 # uses pseudo-ancildata found in iterate.c
-@material(blockid=[8, 9, 20, 79, 95, 1140], data=list(range(512)), fluid=(8, 9), transparent=False, nospawn=True, solid=(79, 20, 95, 1140))
+@material(blockid=[8, 9, 20, 79, 95, 1140], data=list(range(512)), fluid=(8, 9), transparent=(8, 9, 20, 79, 95), nospawn=True, solid=(79, 20, 95, 1140))
 def no_inner_surfaces(self, blockid, data):
     if blockid == 8 or blockid == 9:
         texture = self.load_water()
