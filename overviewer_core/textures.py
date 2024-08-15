@@ -6713,6 +6713,42 @@ def vault(self, blockid, data): # vault
         img = self.build_full_block(top, None, None, side, side)
     elif data == 3: # pointing west
         img = self.build_full_block(top, None, None, side, side)
+    return img
 
 
+# decorated_pot
+# Simplified from the model as it normally extends past a normal block size
+# No handling of pottery shards as they will not be visible at this scale
+@material(blockid=11513, data=list(range(15)), transparent=True, solid=True, nospawn=True)
+def cactus(self, blockid, data):
+    pot_texture = self.load_image("assets/minecraft/textures/entity/decorated_pot/decorated_pot_base.png")
+    #pot_texture = self.load_image_texture("assets/minecraft/textures/colormap/grass.png")
+    side = self.load_image_texture("assets/minecraft/textures/entity/decorated_pot/decorated_pot_side.png")
+
+
+    pot_top = pot_texture.copy().crop((0, 13, 14, 27))
+    pot_opening = pot_texture.copy().crop((8, 0, 16, 8))
+
+    composite = Image.new('RGBA', (16, 16), (255, 0, 0, 0))
+    composite.paste(pot_top,(1,1));
+    composite.paste(pot_opening,(4,4));
+    composite.save("/media/development/Minecraft-Overviewer/test.png")
+
+    img = Image.new("RGBA", (24,24), self.bgcolor)
+    
+    top = self.transform_image_top(composite)
+    side = self.transform_image_side(side)
+    otherside = side.transpose(Image.FLIP_LEFT_RIGHT)
+
+    sidealpha = side.split()[3]
+    side = ImageEnhance.Brightness(side).enhance(0.9)
+    side.putalpha(sidealpha)
+    othersidealpha = otherside.split()[3]
+    otherside = ImageEnhance.Brightness(otherside).enhance(0.8)
+    otherside.putalpha(othersidealpha)
+
+    alpha_over(img, side, (1,6), side)
+    alpha_over(img, otherside, (11,6), otherside)
+    alpha_over(img, top, (0,0), top)
+    
     return img

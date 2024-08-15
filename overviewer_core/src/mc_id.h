@@ -586,6 +586,7 @@ enum mc_block_id {
     
     block_calibrated_sculk_sensor = 1135,
     block_vault = 11511,
+    block_crafter = 11512,
 
     block_copper_grate = 2130,
     block_exposed_copper_grate = 2132,

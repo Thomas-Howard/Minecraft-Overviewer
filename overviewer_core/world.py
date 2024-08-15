@@ -1140,6 +1140,7 @@ class RegionSet(object):
             'minecraft:trial_spawner': (11508, 0),            
             'minecraft:reinforced_deepslate': (11510, 0),
             'minecraft:vault': (11511, 0),
+            'minecraft:decorated_pot': (11513, 0),
             
         }
 
@@ -1336,7 +1337,8 @@ class RegionSet(object):
             data = int(palette_entry['Properties']['age'])
         elif (key.endswith('shulker_box') or key.endswith('piston') or
               key in ['minecraft:observer', 'minecraft:dropper', 'minecraft:dispenser',
-                      'minecraft:piston_head', 'minecraft:jigsaw', 'minecraft:end_rod']):
+                      'minecraft:piston_head', 'minecraft:jigsaw', 'minecraft:end_rod',
+                      'minecraft:crafter']): #
             p = palette_entry['Properties']
             data = {'down': 0, 'up': 1, 'north': 2, 'south': 3, 'west': 4, 'east': 5}[p['facing']]
             if ((key.endswith('piston') and p.get('extended', 'false') == 'true') or
