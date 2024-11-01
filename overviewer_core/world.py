@@ -323,6 +323,10 @@ class RegionSet(object):
             'minecraft:dark_oak_planks': (5, 5),
             'minecraft:crimson_planks': (5, 6),
             'minecraft:warped_planks': (5, 7),
+            'minecraft:cherry_planks': (5, 8),
+            'minecraft:bamboo_planks': (5, 9),
+            'minecraft:bamboo_mosaic': (5, 10),
+            'minecraft:mangrove_planks': (5, 11),
             'minecraft:sapling': (6, 0),
             'minecraft:bedrock': (7, 0),
             'minecraft:water': (8, 0),
@@ -873,13 +877,62 @@ class RegionSet(object):
             'minecraft:mangrove_log': (1126, 0),
             'minecraft:stripped_mangrove_log': (1126, 1),
             'minecraft:muddy_mangrove_roots': (1127, 0),
-            'minecraft:sculk': (11508, 1),
+            'minecraft:tinted_glass': (1140, 0),
+            'minecraft:sculk': (1130, 0),
+            'minecraft:sculk_vein': (1131, 0),
+            'minecraft:sculk_catalyst': (1132, 0),
+            'minecraft:sculk_shrieker': (1133, 0),
+            'minecraft:sculk_sensor': (1134, 0),
+            'minecraft:calibrated_sculk_sensor': (1135, 0),
 
             # 1.20 blocks
             'minecraft:cherry_log': (1128, 0),
             'minecraft:stripped_cherry_log': (1128, 1),
             'minecraft:cherry_leaves': (1129,0),
             'minecraft:pink_petals': (11509, 0),
+            'minecraft:bamboo_block': (1136, 0),
+            'minecraft:stripped_bamboo_block' : (1136, 1),
+
+            'minecraft:pearlescent_froglight': (1142, 0),
+            'minecraft:verdant_froglight': (1143, 0),
+            'minecraft:ochre_froglight': (1144, 0),
+
+            'minecraft:suspicious_sand': (1145, 0),
+            'minecraft:suspicious_gravel': (1146, 0),
+
+
+            # 1.21 blocks
+            'minecraft:tuff_bricks': (2100, 0),
+            'minecraft:polished_tuff': (2101, 0),
+            'minecraft:chiseled_tuff': (2102, 0),
+            'minecraft:chiseled_tuff_bricks': (2103, 0),
+
+            'minecraft:chiseled_copper':   (2120, 0),
+            'minecraft:exposed_chiseled_copper':   (2122, 0),
+            'minecraft:weathered_chiseled_copper':   (2124, 0),
+            'minecraft:oxidized_chiseled_copper':   (2126, 0),
+            'minecraft:waxed_chiseled_copper':   (2121, 0),
+            'minecraft:waxed_exposed_chiseled_copper':   (2123, 0),
+            'minecraft:waxed_weathered_chiseled_copper':   (2125, 0),
+            'minecraft:waxed_oxidized_chiseled_copper':   (2127, 0),            
+            'minecraft:copper_grate':   (2130, 0), 
+            'minecraft:exposed_copper_grate':   (2132, 0),
+            'minecraft:weathered_copper_grate':   (2134, 0),
+            'minecraft:oxidized_copper_grate':   (2136, 0),
+            'minecraft:waxed_copper_grate':   (2131, 0),
+            'minecraft:waxed_exposed_copper_grate':   (2133, 0),
+            'minecraft:waxed_weathered_copper_grate':   (2135, 0),
+            'minecraft:waxed_oxidized_copper_grate':   (2137, 0),
+            
+            'minecraft:copper_bulb':   (2140, 0),
+            'minecraft:exposed_copper_bulb':   (2142, 0),
+            'minecraft:weathered_copper_bulb':   (2144, 0),
+            'minecraft:oxidized_copper_bulb':   (2146, 0),
+
+            'minecraft:waxed_copper_bulb':   (2140, 0),
+            'minecraft:waxed_exposed_copper_bulb':   (2142, 0),
+            'minecraft:waxed_weathered_copper_bulb':   (2144, 0),
+            'minecraft:waxed_oxidized_copper_bulb':   (2146, 0),
 
             # New blocks
             'minecraft:carved_pumpkin': (11300, 0),
@@ -1027,6 +1080,68 @@ class RegionSet(object):
             'minecraft:polished_deepslate_wall': (1810, 0),
             'minecraft:deepslate_brick_wall': (1811, 0),
             'minecraft:deepslate_tile_wall': (1812, 0),
+            'minecraft:tuff_wall': (1813, 0),
+            'minecraft:polished_tuff_wall': (1814, 0),
+            'minecraft:tuff_brick_wall': (1815, 0),
+            'minecraft:mud_brick_wall': (1816, 0),            
+
+            'minecraft:mangrove_slab': (2200, 0),
+            'minecraft:cherry_slab': (2201, 0),
+            'minecraft:bamboo_slab': (2202, 0),
+            'minecraft:bamboo_mosaic_slab': (2203, 0),
+            'minecraft:tuff_slab': (2204, 0),
+            'minecraft:polished_tuff_slab': (2205, 0),
+            'minecraft:tuff_brick_slab': (2206, 0),
+            
+            'minecraft:mangrove_stairs': (2207, 0),
+            'minecraft:cherry_stairs': (2208, 0),
+            'minecraft:bamboo_stairs': (2209, 0),
+            'minecraft:bamboo_mosaic_stairs': (2210, 0),
+            'minecraft:tuff_stairs': (2211, 0),
+            'minecraft:polished_tuff_stairs': (2212, 0),
+            'minecraft:tuff_brick_stairs': (2213, 0),
+            'minecraft:mud_brick_stairs': (2214, 0),
+
+            'minecraft:mangrove_fence': (2219, 0),
+            'minecraft:cherry_fence': (2220, 0),
+            'minecraft:bamboo_fence': (2221, 0),
+
+            'minecraft:mangrove_fence_gate': (2222, 0),
+            'minecraft:cherry_fence_gate': (2223, 0),
+            'minecraft:bamboo_fence_gate': (2224, 0),
+
+
+            'minecraft:copper_door': (2225, 0),
+            'minecraft:exposed_copper_door': (2226, 0),
+            'minecraft:weathered_copper_door': (2227, 0),
+            'minecraft:oxidized_copper_door': (2228, 0),
+            'minecraft:waxed_copper_door': (2229, 0),
+            'minecraft:waxed_exposed_copper_door': (2230, 0),
+            'minecraft:waxed_weathered_copper_door': (2231, 0),
+            'minecraft:waxed_oxidized_copper_door': (2232, 0),
+            'minecraft:bamboo_door': (2233, 0),
+            'minecraft:mangrove_door': (2234, 0),
+            'minecraft:cherry_door': (2235, 0),
+
+            'minecraft:copper_trapdoor': (2236, 0),
+            'minecraft:exposed_copper_trapdoor': (2237, 0),
+            'minecraft:weathered_copper_trapdoor': (2238, 0),
+            'minecraft:oxidized_copper_trapdoor': (2239, 0),
+            'minecraft:waxed_copper_trapdoor': (2240, 0),
+            'minecraft:waxed_exposed_copper_trapdoor': (2241, 0),
+            'minecraft:waxed_weathered_copper_trapdoor': (2242, 0),
+            'minecraft:waxed_oxidized_copper_trapdoor': (2243, 0),
+            'minecraft:bamboo_trapdoor': (2244, 0),
+            'minecraft:mangrove_trapdoor': (2245, 0),
+            'minecraft:cherry_trapdoor': (2246, 0),
+            'minecraft:bamboo_pressure_plate': (2247, 0),
+            'minecraft:mangrove_pressure_plate': (2248, 0),
+            'minecraft:cherry_pressure_plate': (2249, 0),
+            'minecraft:trial_spawner': (11508, 0),            
+            'minecraft:reinforced_deepslate': (11510, 0),
+            'minecraft:vault': (11511, 0),
+            'minecraft:decorated_pot': (11513, 0),
+            
         }
 
         colors = [   'white', 'orange', 'magenta', 'light_blue',
@@ -1055,8 +1170,9 @@ class RegionSet(object):
         return "<RegionSet regiondir=%r>" % self.regiondir
 
     def _get_block(self, palette_entry):
-        wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab',
-                        'minecraft:acacia_slab','minecraft:dark_oak_slab','minecraft:petrified_oak_slab', 'minecraft:crimson_slab', 'minecraft:warped_slab')
+        wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab', 'minecraft:acacia_slab',
+                        'minecraft:dark_oak_slab','minecraft:petrified_oak_slab', 'minecraft:crimson_slab', 'minecraft:warped_slab',
+                        'minecraft:mangrove_slab', 'minecraft:cherry_slab', 'minecraft:bamboo_slab', 'minecraft:bamboo_mosaic_slab')
         stone_slabs = ('minecraft:stone_slab', 'minecraft:sandstone_slab','minecraft:red_sandstone_slab',
                         'minecraft:cobblestone_slab', 'minecraft:brick_slab','minecraft:purpur_slab',
                         'minecraft:stone_brick_slab', 'minecraft:nether_brick_slab',
@@ -1071,7 +1187,9 @@ class RegionSet(object):
                         'minecraft:blackstone_slab','minecraft:polished_blackstone_slab',
                         'minecraft:polished_blackstone_brick_slab', 'minecraft:cobbled_deepslate_slab',
                         'minecraft:polished_deepslate_slab', 'minecraft:deepslate_brick_slab',
-                        'minecraft:deepslate_tile_slab', 'minecraft:mud_brick_slab'
+                        'minecraft:deepslate_tile_slab', 'minecraft:mud_brick_slab',
+                        'minecraft:tuff_slab', 'minecraft:polished_tuff_slab',
+                        'minecraft:tuff_brick_slab'
                          )
 
         prismarine_slabs = ('minecraft:prismarine_slab','minecraft:dark_prismarine_slab','minecraft:prismarine_brick_slab')
@@ -1130,6 +1248,13 @@ class RegionSet(object):
             'minecraft:prismarine_slab': 'minecraft:prismarine',
             'minecraft:dark_prismarine_slab': 'minecraft:dark_prismarine',
             'minecraft:prismarine_brick_slab': 'minecraft:prismarine_bricks',
+            'minecraft:mangrove_slab': 'minecraft:mangrove_planks', 
+            'minecraft:cherry_slab': 'minecraft:cherry_planks', 
+            'minecraft:bamboo_slab': 'minecraft:bamboo_planks',
+            'minecraft:bamboo_mosaic_slab': 'minecraft:bamboo_mosaic', 
+            'minecraft:tuff_slab': 'minecraft:tuff',
+            'minecraft:polished_tuff_slab': 'minecraft:polished_tuff',
+            'minecraft:tuff_brick_slab': 'minecraft:tuff_brick' 
         }
 
         colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
@@ -1137,7 +1262,8 @@ class RegionSet(object):
 
         key = palette_entry['Name']
         (block, data) = self._blockmap[key]
-        if key in ['minecraft:redstone_ore', 'minecraft:redstone_lamp']:
+        if key in ['minecraft:redstone_ore', 'minecraft:redstone_lamp', 'minecraft:copper_bulb', 'minecraft:exposed_copper_bulb','minecraft:weathered_copper_bulb', 'minecraft:oxidized_copper_bulb',
+                   'minecraft:waxed_copper_bulb','minecraft:waxed_exposed_copper_bulb','minecraft:waxed_weathered_copper_bulb','minecraft:waxed_oxidized_copper_bulb']:
             if palette_entry['Properties']['lit'] == 'true':
                 block += 1
         elif key.endswith('gate'):
@@ -1211,7 +1337,8 @@ class RegionSet(object):
             data = int(palette_entry['Properties']['age'])
         elif (key.endswith('shulker_box') or key.endswith('piston') or
               key in ['minecraft:observer', 'minecraft:dropper', 'minecraft:dispenser',
-                      'minecraft:piston_head', 'minecraft:jigsaw', 'minecraft:end_rod']):
+                      'minecraft:piston_head', 'minecraft:jigsaw', 'minecraft:end_rod',
+                      'minecraft:crafter']): #
             p = palette_entry['Properties']
             data = {'down': 0, 'up': 1, 'north': 2, 'south': 3, 'west': 4, 'east': 5}[p['facing']]
             if ((key.endswith('piston') and p.get('extended', 'false') == 'true') or
@@ -1357,7 +1484,8 @@ class RegionSet(object):
             # A moisture level of 7 has a different texture from other farmland
             data = 1 if palette_entry['Properties'].get('moisture', '0') == '7' else 0
         elif key in ['minecraft:grindstone', 'minecraft:lectern', 'minecraft:campfire',
-                     'minecraft:bell', 'minecraft:soul_campfire']:
+                     'minecraft:bell', 'minecraft:soul_campfire', 'minecraft:vault',
+                     'minecraft:calibrated_sculk_sensor']:
             p = palette_entry['Properties']
             data = {'south': 0, 'west': 1, 'north': 2, 'east': 3}[p['facing']]
             if key == 'minecraft:grindstone':
@@ -1394,7 +1522,7 @@ class RegionSet(object):
             p = palette_entry['Properties']
             if p['berries'] == 'true':
                 data = 1
-        elif key == 'minecraft:glow_lichen':
+        elif key in ['minecraft:glow_lichen', 'minecraft:sculk_vein']:
             p = palette_entry['Properties']
             if p['down'] == 'true':
                 data |= 1 << 0

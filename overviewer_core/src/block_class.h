@@ -45,4 +45,7 @@ extern const size_t block_class_alt_height_len;
 extern const mc_block_t block_class_nether_roof[];
 extern const size_t block_class_nether_roof_len;
 
+extern const mc_block_t block_class_copper_grate[];
+extern const size_t block_class_copper_grate_len;
+
 #endif
