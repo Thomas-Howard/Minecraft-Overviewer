@@ -327,6 +327,7 @@ class RegionSet(object):
             'minecraft:bamboo_planks': (5, 9),
             'minecraft:bamboo_mosaic': (5, 10),
             'minecraft:mangrove_planks': (5, 11),
+            'minecraft:pale_oak_planks': (5, 12),
             'minecraft:sapling': (6, 0),
             'minecraft:bedrock': (7, 0),
             'minecraft:water': (8, 0),
@@ -990,6 +991,7 @@ class RegionSet(object):
             'minecraft:dark_oak_trapdoor': (11336, 0),
             'minecraft:crimson_trapdoor': (12501, 0),
             'minecraft:warped_trapdoor': (12502, 0),
+            'minecraft:pale_oak_trapdoor': (12503, 0),
             'minecraft:petrified_oak_slab': (126, 0),
             'minecraft:prismarine_stairs': (11337, 0),
             'minecraft:dark_prismarine_stairs': (11338, 0),
@@ -1042,6 +1044,7 @@ class RegionSet(object):
             'minecraft:jungle_sapling': (11388, 0),
             'minecraft:acacia_sapling': (11389, 0),
             'minecraft:dark_oak_sapling': (11390, 0),
+            'minecraft:pale_oak_sapling': (11391, 0),
             'minecraft:bamboo_sapling': (11413, 0),
             'minecraft:scaffolding': (11414, 0),
             "minecraft:smooth_red_sandstone_stairs": (11415, 0),
@@ -1140,8 +1143,47 @@ class RegionSet(object):
             'minecraft:trial_spawner': (11508, 0),            
             'minecraft:reinforced_deepslate': (11510, 0),
             'minecraft:vault': (11511, 0),
+#            'minecraft:crafter': (58, 0),
+            'minecraft:crafter': (11514, 0),
             'minecraft:decorated_pot': (11513, 0),
+
+            # 1.21.4 - Winter drop
+            'minecraft:pale_oak_log': (11614, 0),
+            'minecraft:stripped_pale_oak_log': (11614, 1),
+            'minecraft:creaking_heart': (11615, 0),
             
+            'minecraft:pale_oak_leaves': (11619,0),
+
+            'minecraft:pale_moss_block': (11616, 0),
+            'minecraft:pale_hanging_moss': (11617, 0),
+            'minecraft:pale_moss_carpet': (171, 17),
+
+            'minecraft:closed_eyeblossom': (11624, 0),
+            'minecraft:open_eyeblossom': (11625, 0),
+            'minecraft:eyeblossom': (11625, 0),
+
+            'minecraft:pale_oak_slab': (11626, 0),
+            'minecraft:pale_oak_stairs': (11627, 0),
+            'minecraft:pale_oak_fence': (11628, 0),
+            'minecraft:pale_oak_fence_gate': (11629, 0),            
+            'minecraft:pale_oak_pressure_plate': (11630, 0),
+            'minecraft:pale_oak_door': (11631, 0),
+            'minecraft:pale_oak_trapdoor': (11632, 0),
+            'minecraft:pale_oak_button': (11633, 0),
+            'minecraft:pale_oak_sign': (11634, 0),            
+            'minecraft:pale_oak_wall_sign': (11635, 0),
+            
+
+            'minecraft:resin_bricks': (11640, 0),
+            'minecraft:resin_brick_slab': (11642, 0),   
+            'minecraft:resin_brick_stairs': (11643, 0),          
+            'minecraft:resin_brick_wall': (11644, 0),            
+            'minecraft:chiseled_resin_bricks': (11645, 0),
+            'minecraft:resin_clump': (11646, 0),
+            'minecraft:resin_block': (11647, 0),
+
+
+
         }
 
         colors = [   'white', 'orange', 'magenta', 'light_blue',
@@ -1172,7 +1214,9 @@ class RegionSet(object):
     def _get_block(self, palette_entry):
         wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab', 'minecraft:acacia_slab',
                         'minecraft:dark_oak_slab','minecraft:petrified_oak_slab', 'minecraft:crimson_slab', 'minecraft:warped_slab',
-                        'minecraft:mangrove_slab', 'minecraft:cherry_slab', 'minecraft:bamboo_slab', 'minecraft:bamboo_mosaic_slab')
+                        'minecraft:mangrove_slab', 'minecraft:cherry_slab', 'minecraft:bamboo_slab', 'minecraft:bamboo_mosaic_slab',
+                        'minecraft:pale_oak_slab'
+                        )
         stone_slabs = ('minecraft:stone_slab', 'minecraft:sandstone_slab','minecraft:red_sandstone_slab',
                         'minecraft:cobblestone_slab', 'minecraft:brick_slab','minecraft:purpur_slab',
                         'minecraft:stone_brick_slab', 'minecraft:nether_brick_slab',
@@ -1189,7 +1233,7 @@ class RegionSet(object):
                         'minecraft:polished_deepslate_slab', 'minecraft:deepslate_brick_slab',
                         'minecraft:deepslate_tile_slab', 'minecraft:mud_brick_slab',
                         'minecraft:tuff_slab', 'minecraft:polished_tuff_slab',
-                        'minecraft:tuff_brick_slab'
+                        'minecraft:tuff_brick_slab', 'minecraft:resin_brick_slab'
                          )
 
         prismarine_slabs = ('minecraft:prismarine_slab','minecraft:dark_prismarine_slab','minecraft:prismarine_brick_slab')
@@ -1254,7 +1298,9 @@ class RegionSet(object):
             'minecraft:bamboo_mosaic_slab': 'minecraft:bamboo_mosaic', 
             'minecraft:tuff_slab': 'minecraft:tuff',
             'minecraft:polished_tuff_slab': 'minecraft:polished_tuff',
-            'minecraft:tuff_brick_slab': 'minecraft:tuff_brick' 
+            'minecraft:tuff_brick_slab': 'minecraft:tuff_brick',
+            'minecraft:pale_oak_slab': 'minecraft:pale_oak_planks',
+            'minecraft:resin_brick_slab': 'minecraft:resin_bricks' 
         }
 
         colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
@@ -1338,7 +1384,7 @@ class RegionSet(object):
         elif (key.endswith('shulker_box') or key.endswith('piston') or
               key in ['minecraft:observer', 'minecraft:dropper', 'minecraft:dispenser',
                       'minecraft:piston_head', 'minecraft:jigsaw', 'minecraft:end_rod',
-                      'minecraft:crafter']): #
+                      ]): # should have 'minecraft:crafter', but it does not work for unknown reasons"
             p = palette_entry['Properties']
             data = {'down': 0, 'up': 1, 'north': 2, 'south': 3, 'west': 4, 'east': 5}[p['facing']]
             if ((key.endswith('piston') and p.get('extended', 'false') == 'true') or
@@ -1522,7 +1568,7 @@ class RegionSet(object):
             p = palette_entry['Properties']
             if p['berries'] == 'true':
                 data = 1
-        elif key in ['minecraft:glow_lichen', 'minecraft:sculk_vein']:
+        elif key in ['minecraft:glow_lichen', 'minecraft:sculk_vein', 'minecraft:resin_clump']:
             p = palette_entry['Properties']
             if p['down'] == 'true':
                 data |= 1 << 0

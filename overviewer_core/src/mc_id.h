@@ -567,6 +567,7 @@ enum mc_block_id {
     block_bamboo_trapdoor = 2244,
     block_mangrove_trapdoor = 2245,
     block_cherry_trapdoor = 2246,
+    block_pale_oak_trapdoor = 11632,
 
     block_copper_door = 2225,
     block_exposed_copper_door = 2226,
@@ -579,6 +580,7 @@ enum mc_block_id {
     block_bamboo_door = 2233,
     block_mangrove_door = 2234,
     block_cherry_door = 2235,
+    block_pale_oak_door = 11631,
 
     block_bamboo_pressure_plate = 2247,
     block_mangrove_pressure_plate = 2248,
@@ -595,7 +597,13 @@ enum mc_block_id {
     block_waxed_copper_grate = 2131,
     block_waxed_exposed_copper_grate = 2133,
     block_waxed_weathered_copper_grate = 2135,
-    block_waxed_oxidized_copper_grate = 2137
+    block_waxed_oxidized_copper_grate = 2137,
+    block_pale_oak_stairs = 11627,    
+    block_resin_brick_stairs = 11643,
+    block_pale_oak_fence = 11628,
+    block_pale_oak_gate = 11629,
+    block_resin_brick_wall = 11644
+
 };
 
 typedef uint16_t mc_block_t;

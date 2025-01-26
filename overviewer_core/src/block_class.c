@@ -158,7 +158,9 @@ const mc_block_t block_class_stair[] = {
     block_tuff_stairs,
     block_polished_tuff_stairs,
     block_tuff_brick_stairs,
-    block_mud_brick_stairs};
+    block_mud_brick_stairs,
+    block_pale_oak_stairs,    
+    block_resin_brick_stairs};
 const size_t block_class_stair_len = COUNT_OF(block_class_stair);
 
 const mc_block_t block_class_door[] = {
@@ -181,7 +183,8 @@ const mc_block_t block_class_door[] = {
     block_waxed_oxidized_copper_door,
     block_bamboo_door,
     block_mangrove_door,
-    block_cherry_door};
+    block_cherry_door,
+    block_pale_oak_door};
 const size_t block_class_door_len = COUNT_OF(block_class_door);
 
 const mc_block_t block_class_ancil[] = {
@@ -249,6 +252,8 @@ const mc_block_t block_class_ancil[] = {
     block_polished_tuff_stairs,
     block_tuff_brick_stairs,
     block_mud_brick_stairs,
+    block_pale_oak_stairs,    
+    block_resin_brick_stairs,
     block_grass,
     block_flowing_water,
     block_water,
@@ -285,6 +290,7 @@ const mc_block_t block_class_ancil[] = {
     block_polished_tuff_wall,
     block_tuff_brick_wall,
     block_mud_brick_wall,
+    block_resin_brick_wall,
     block_copper_grate,
     block_exposed_copper_grate,
     block_weathered_copper_grate,
@@ -303,7 +309,8 @@ const mc_block_t block_class_ancil[] = {
     block_waxed_oxidized_copper_door,
     block_bamboo_door,
     block_mangrove_door,
-    block_cherry_door};
+    block_cherry_door,
+    block_pale_oak_door};
 const size_t block_class_ancil_len = COUNT_OF(block_class_ancil);
 
 const mc_block_t block_class_alt_height[] = {
@@ -408,7 +415,9 @@ const mc_block_t block_class_alt_height[] = {
     block_tuff_stairs,
     block_polished_tuff_stairs,
     block_tuff_brick_stairs,    
-    block_mud_brick_stairs};
+    block_mud_brick_stairs,
+    block_pale_oak_stairs,    
+    block_resin_brick_stairs};
 const size_t block_class_alt_height_len = COUNT_OF(block_class_alt_height);
 
 const mc_block_t block_class_nether_roof[] = {
