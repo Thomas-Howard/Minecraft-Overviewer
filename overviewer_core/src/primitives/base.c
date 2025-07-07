@@ -23,7 +23,7 @@
 typedef struct {
     int32_t use_biomes;
     /* grasscolor and foliagecolor lookup tables */
-    PyObject *grasscolor, *foliagecolor, *watercolor;
+    PyObject *grasscolor, *foliagecolor, *dryfoliagecolor, *watercolor;
     /* biome-compatible grass/leaf textures */
     PyObject* grass_texture;
 } PrimitiveBase;
@@ -40,6 +40,7 @@ base_start(void* data, RenderState* state, PyObject* support) {
 
     /* color lookup tables */
     self->foliagecolor = PyObject_CallMethod(state->textures, "load_foliage_color", "");
+    self->dryfoliagecolor = PyObject_CallMethod(state->textures, "load_dry_foliage_color", "");
     self->grasscolor = PyObject_CallMethod(state->textures, "load_grass_color", "");
     self->watercolor = PyObject_CallMethod(state->textures, "load_water_color", "");
 
@@ -51,6 +52,7 @@ base_finish(void* data, RenderState* state) {
     PrimitiveBase* self = (PrimitiveBase*)data;
 
     Py_XDECREF(self->foliagecolor);
+    Py_XDECREF(self->dryfoliagecolor);
     Py_XDECREF(self->grasscolor);
     Py_XDECREF(self->watercolor);
     Py_XDECREF(self->grass_texture);
@@ -125,7 +127,7 @@ base_draw(void* data, RenderState* state, PyObject* src, PyObject* mask, PyObjec
             /* grass needs a special facemask */
             facemask = self->grass_texture;
         }
-        if (block_class_is_subset(state->block, (mc_block_t[]){block_grass, block_tallgrass, block_pumpkin_stem, block_melon_stem, block_vine, block_waterlily, block_double_plant}, 7)) {
+        if (block_class_is_subset(state->block, (mc_block_t[]){block_grass, block_tallgrass, block_pumpkin_stem, block_melon_stem, block_vine, block_waterlily, block_double_plant, block_bush}, 8)) {
             color_table = self->grasscolor;
         } else if (block_class_is_subset(state->block, (mc_block_t[]){block_flowing_water, block_water}, 2)) {
             color_table = self->watercolor;
@@ -133,6 +135,8 @@ base_draw(void* data, RenderState* state, PyObject* src, PyObject* mask, PyObjec
             color_table = self->foliagecolor;
             /* birch foliage color is flipped XY-ways */
             flip_xy = state->block_data == 2;
+        } else if (block_class_is_subset(state->block, (mc_block_t[]){block_leaf_litter}, 1)) {
+            color_table = self->dryfoliagecolor;
         }
 
         if (color_table) {

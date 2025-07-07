@@ -98,7 +98,7 @@ class Textures(object):
     def __getstate__(self):
         # we must get rid of the huge image lists, and other images
         attributes = self.__dict__.copy()
-        for attr in ['blockmap', 'biome_grass_texture', 'watertexture', 'lavatexture', 'firetexture', 'portaltexture', 'lightcolor', 'grasscolor', 'foliagecolor', 'watercolor', 'texture_cache']:
+        for attr in ['blockmap', 'biome_grass_texture', 'watertexture', 'lavatexture', 'firetexture', 'portaltexture', 'lightcolor', 'grasscolor', 'foliagecolor', 'dryfoliagecolor', 'watercolor', 'texture_cache']:
             try:
                 del attributes[attr]
             except KeyError:
@@ -118,13 +118,15 @@ class Textures(object):
     ##
     
     def generate(self):
-        # Make sure we have the foliage/grasscolor images available
+        # Make sure we have the foliage/dry-foliage/grasscolor images available
         try:
             self.load_foliage_color()
+            self.load_dry_foliage_color()
             self.load_grass_color()
         except TextureException as e:
             logging.error(
-                "Your system is missing either assets/minecraft/textures/colormap/foliage.png "
+                "Your system is missing either assets/minecraft/textures/colormap/foliage.png, "
+                "assets/minecraft/textures/colormap/dry_foliage.png, "
                 "or assets/minecraft/textures/colormap/grass.png. Either complement your "
                 "resource pack with these texture files, or install the vanilla Minecraft "
                 "client to use as a fallback.")
@@ -428,6 +430,14 @@ class Textures(object):
         if not hasattr(self, "foliagecolor"):
             self.foliagecolor = list(self.load_image("assets/minecraft/textures/colormap/foliage.png").getdata())
         return self.foliagecolor
+    
+    def load_dry_foliage_color(self):
+        """Helper function to load the foliage color texture."""
+        if not hasattr(self, "dryfoliagecolor"):
+            self.dryfoliagecolor = list(self.load_image("assets/minecraft/textures/colormap/dry_foliage.png").getdata())
+        return self.dryfoliagecolor
+
+
 
     #I guess "watercolor" is wrong. But I can't correct as my texture pack don't define water color.
     def load_water_color(self):
