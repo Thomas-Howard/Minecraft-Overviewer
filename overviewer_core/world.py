@@ -1182,8 +1182,21 @@ class RegionSet(object):
             'minecraft:resin_clump': (11646, 0),
             'minecraft:resin_block': (11647, 0),
 
+            # 1.21.5 - Spring to Life drop
+            'minecraft:wildflowers': (11649, 0),   
+            'minecraft:bush': (11650, 0),          
+            'minecraft:firefly_bush': (11651, 0),            
+            'minecraft:cactus_flower': (11652, 0),
+            'minecraft:short_dry_grass': (11653, 0),
+            'minecraft:tall_dry_grass': (11654, 0),
+            'minecraft:leaf_litter': (11655, 0),
 
+            
+            'minecraft:test_block': (11656, 0),
+            'minecraft:test_instance_block': (11657, 0),
 
+            # 1.21.6 - Chase the Skies drop
+            'minecraft:dried_ghast': (11658, 0),
         }
 
         colors = [   'white', 'orange', 'magenta', 'light_blue',

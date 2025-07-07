@@ -602,7 +602,23 @@ enum mc_block_id {
     block_resin_brick_stairs = 11643,
     block_pale_oak_fence = 11628,
     block_pale_oak_gate = 11629,
-    block_resin_brick_wall = 11644
+    block_resin_brick_wall = 11644,
+
+    block_wildflowers = 11649,
+    block_bush = 11650,       
+    block_firefly_bush = 11651,         
+    block_cactus_flower = 11652,
+    block_short_dry_grass = 11653,
+    block_tall_dry_grass = 11654,
+    block_leaf_litter = 11655,
+                
+    block_test_block = 11656,
+    block_test_instance_block = 11657,
+
+    block_dried_ghast = 11658
+
+
+
 
 };
 
