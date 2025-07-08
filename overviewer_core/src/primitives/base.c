@@ -106,8 +106,8 @@ base_draw(void* data, RenderState* state, PyObject* src, PyObject* mask, PyObjec
      */
     if (/* grass, but not snowgrass */
         (state->block == block_grass && get_data(state, BLOCKS, state->x, state->y + 1, state->z) != 78) ||
-        block_class_is_subset(state->block, (mc_block_t[]){block_vine, block_waterlily, block_flowing_water, block_water, block_leaves, block_leaves2},
-                              6) ||
+        block_class_is_subset(state->block, (mc_block_t[]){block_vine, block_waterlily, block_flowing_water, block_water, block_leaves, block_leaves2, block_bush, block_leaf_litter},
+                              8) ||
         /* tallgrass, but not dead shrubs */
         (state->block == block_tallgrass && state->block_data != 0) ||
         /* pumpkin/melon stem, not fully grown. Fully grown stems
@@ -135,7 +135,7 @@ base_draw(void* data, RenderState* state, PyObject* src, PyObject* mask, PyObjec
             color_table = self->foliagecolor;
             /* birch foliage color is flipped XY-ways */
             flip_xy = state->block_data == 2;
-        } else if (block_class_is_subset(state->block, (mc_block_t[]){block_leaf_litter}, 1)) {
+        } else if (state->block == block_leaf_litter) {
             color_table = self->dryfoliagecolor;
         }
 
