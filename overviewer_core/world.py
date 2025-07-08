@@ -1688,7 +1688,7 @@ class RegionSet(object):
     def _packed_longarray_to_shorts_v116(self, long_array, n, num_palette):
         bits_per_value = max(4, (len(long_array) * 64) // n)
 
-        b = numpy.asarray(long_array, dtype=numpy.uint64)
+        b = numpy.asarray(long_array, dtype=numpy.int64)
         result = numpy.zeros((n,), dtype=numpy.uint16)
         shorts_per_long = 64 // bits_per_value
         mask = (1 << bits_per_value) - 1
