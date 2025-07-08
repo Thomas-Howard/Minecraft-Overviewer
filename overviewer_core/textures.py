@@ -6561,6 +6561,7 @@ def pinkpetals(self, blockid, data):
     t = self.load_image_texture("assets/minecraft/textures/block/pink_petals.png").copy()
     return self.build_full_block(None, None, None, None, None, t)
 
+
 @material(blockid=[11619], data=list(range(16)), transparent=True, solid=True)
 def cherryleaves(self, blockid, data):
     # mask out the bits 4 and 8
@@ -6931,3 +6932,19 @@ def resin_clump(self, blockid, data):
         return self.build_full_block(top, south, west, east, north, bottom)
     else: # self.rotation == 3:
         return self.build_full_block(top, east, south, north, west, bottom)
+
+
+@material(blockid=11649, transparent=True, nodata=True)
+def wildflowers(self, blockid, data):
+    t = self.load_image_texture("assets/minecraft/textures/block/wildflowers.png").copy()
+    return self.build_full_block(None, None, None, None, None, t)
+
+@material(blockid=11655, transparent=True, nodata=True)
+def leaf_litter(self, blockid, data):
+    t = self.load_image_texture("assets/minecraft/textures/block/leaf_litter.png").copy()
+    return self.build_full_block(None, None, None, None, None, t)
+
+
+
+block(blockid=[11656], top_image="assets/minecraft/textures/block/test_block_log.png")
+block(blockid=[11657], top_image="assets/minecraft/textures/block/test_instance_block.png")
