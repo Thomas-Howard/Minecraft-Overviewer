@@ -6912,6 +6912,7 @@ def resin_clump(self, blockid, data):
 sprite(blockid=11391, imagename="assets/minecraft/textures/block/pale_oak_sapling.png")
 
 
+
 @material(blockid=11646, data=list(range(1 << 6)), transparent=True)
 def resin_clump(self, blockid, data):
     tex = self.load_image_texture("assets/minecraft/textures/block/resin_clump.png")
@@ -6948,3 +6949,20 @@ def leaf_litter(self, blockid, data):
 
 block(blockid=[11656], top_image="assets/minecraft/textures/block/test_block_log.png")
 block(blockid=[11657], top_image="assets/minecraft/textures/block/test_instance_block.png")
+
+
+# sprite(blockid=11650, imagename="assets/minecraft/textures/block/bush.png")
+sprite(blockid=11652, imagename="assets/minecraft/textures/block/cactus_flower.png")
+sprite(blockid=11653, imagename="assets/minecraft/textures/block/short_dry_grass.png")
+sprite(blockid=11654, imagename="assets/minecraft/textures/block/tall_dry_grass.png")
+
+
+@material(blockid=11650, data=list(range(3)), transparent=True)
+def bush(self, blockid, data):
+    texture = self.load_image_texture("assets/minecraft/textures/block/bush.png")    
+    return self.build_billboard(texture)
+
+@material(blockid=11651, data=list(range(3)), transparent=True)
+def firefly_bush(self, blockid, data):
+    texture = self.load_image_texture("assets/minecraft/textures/block/firefly_bush.png")    
+    return self.build_billboard(texture)
