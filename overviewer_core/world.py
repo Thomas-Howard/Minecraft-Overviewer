@@ -192,10 +192,16 @@ class World(object):
         # location
 
         ## read spawn info from level.dat
+        #data = self.leveldat
+        #disp_spawnX = spawnX = data['SpawnX']
+        #spawnY = data['SpawnY']
+        #disp_spawnZ = spawnZ = data['SpawnZ']
+
         data = self.leveldat
-        disp_spawnX = spawnX = data['SpawnX']
-        spawnY = data['SpawnY']
-        disp_spawnZ = spawnZ = data['SpawnZ']
+        disp_spawnX = spawnX = 0
+        spawnY = 0
+        disp_spawnZ = spawnZ = 0
+
 
         ## clamp spawnY to a sane value, in-chunk value
         if spawnY < -63:
